@@ -83,7 +83,7 @@ const Chat = (props) => {
                     textAlign: "center",
                   }}
                 >
-                  <Typography>The content of the Popover.</Typography>
+                  <Typography>ok.</Typography>
                 </Box>
               </Popover>
             </div>
