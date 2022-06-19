@@ -1,0 +1,32 @@
+.chatBoxTop {
+    height: 90%;
+    overflow-y: scroll;
+    padding-right: 10px;
+  }
+  
+  .chatBoxBottom {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .chatMessageInput {
+    width: 85%;
+    font-size: 18px;
+    height: 70px;
+    margin-left: 2px;
+    padding: 10px;
+  }
+  .chatSubmitButton {
+    width: 70px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+margin-left: 6px;
+    /* margin-right:8rem; */
+    cursor: pointer;
+    background-color: teal;
+    color: white;
+  }
