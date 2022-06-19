@@ -1,0 +1,92 @@
+.MainContainer{
+  background-color: #313234;
+  /* width: 100%;
+  height: 400vh; */
+}
+.filterBox {
+  width: 10vmax;
+  margin-top: 30px;
+  /* position: absolute;
+  top: 10vmax;
+  left: 4vmax; */
+}
+
+.search {
+  padding: 10px;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+}
+
+.mainTitle {
+  color: white;
+  font-weight: bold;
+  margin-left: 330px;
+  font-size: 35px;
+  /* border-left: 8px solid #8A15FC; */
+  border-radius: 7px;
+  padding: 18px;
+  margin-bottom: 40px; 
+  /* width: 100%; */
+  height: 10vh;
+}
+.peripheral-container {
+  display: flex;
+  margin-top: -170px;
+  width: 100%;
+  height: 100%;
+}
+.left-container {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.left-btn {
+  width: 200px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  /* font-family: "Times New Roman", Times, serif; */
+  /* background-color: rgb(202, 202, 20); */
+  font-weight: bold;
+  font-size: 20px;
+  height: 40px;
+  color: rgb(255, 255, 255);
+}
+.right-container {
+  margin-left: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  position: relative;
+  height: 100%;
+}
+
+.pagination{
+  background-color: #fff;
+  background: none;
+  margin-top: 30px;
+  justify-content: center;  
+}
+.paginationUP{
+  background-color: #fff;
+  background: none;
+  margin-top: -30px;
+  justify-content: center;
+  margin-left: 140px; 
+}
+
+.paginationText{
+  font-size: 18px;
+  width: 100%;
+  margin-top: -55px;
+}
+.paginationTextUP{
+  font-size: 18px;
+  width: 80%;
+  margin-top: -52px;
+  margin-left: 340px;
+}
+

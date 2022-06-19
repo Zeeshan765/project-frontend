@@ -1,0 +1,87 @@
+#cardStyle{
+background-color: #1b1b1b;
+border: none;
+box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.2), 4px 8px 30px 10px rgba(63, 60, 65, 0.19) !important;
+margin-top: 40px;
+height: 500px;
+}
+
+
+.cardGroup{
+  margin-top: 35px;
+  background-color: #8A15FC !important;
+}
+.imgStyle{
+  height: 280px;
+}
+.card-btn{
+  width: 352px;
+  height: 60px;
+  border-radius: 4px !important;
+  color: #EBDBFD;
+  background-color: #8A15FC !important;
+  box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.2), 4px 8px 30px 10px rgba(0, 0, 0, 0.19);
+  border: none !important;
+  margin-left: -16px;
+  margin-bottom: -9px;
+  font-size: 1.1rem !important;
+  font-weight: 520 !important;
+}
+
+.card-btn:hover{
+  background-color: #7110d1 !important;
+  width: 353px !important;
+}
+
+.product-box1 {
+  margin: 1rem;
+  width: 300px;
+  height: 500px;
+  border: 1px solid rgb(12, 12, 245);
+  background: #101424;
+}
+.upper-box1 {
+  height: 200px;
+  width: 100%;
+}
+.upper-box1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.lower-box1 {
+  height: 60%;
+  width: 100%;
+color: white;
+  text-align: center;
+}
+.lower-box1 h3 {
+  margin-top: 8px;
+  font-family: inherit;
+  font-weight: bold;
+}
+.lower-box1 h4 {
+  margin-top: 8px;
+  font-family: inherit;
+  font-weight: normal;
+}
+
+.lower-box1 p {
+  margin-top: 8px;
+  text-align: center;
+  font-family: inherit;
+  font-weight: normal;
+}
+.btn-check {
+  padding: 8px;
+  margin-top: 1rem;
+  width: 170px;
+  font-size: 1rem;
+  color: white;
+  background-color: rgb(226, 50, 147);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn-check:hover {
+  background-color: rgb(107, 22, 177);
+}

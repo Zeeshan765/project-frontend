@@ -1,0 +1,45 @@
+.TrendingProduct-container {
+  margin: 0px 10px;
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 99%;
+  height: 550px;
+}
+#cardStyle {
+  background-color: #1b1b1b !important;
+  border: none;
+  box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.2),
+    4px 8px 30px 10px rgba(63, 60, 65, 0.19) !important;
+  margin-top: 40px;
+}
+
+.cardGroup {
+  margin-top: 35px;
+  background-color: #8a15fc !important;
+}
+.imgStyle {
+  height: 280px;
+}
+.cardBtn {
+
+  width: 343px;
+  height: 60px;
+  border-radius: 12px !important;
+  color: #ebdbfd;
+  background-color: #8a15fc !important;
+  box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.2),
+    4px 8px 30px 10px rgba(0, 0, 0, 0.19);
+  border: none !important;
+  margin-left: 5px;
+  margin-bottom: -9px;
+  font-size: 1.1rem !important;
+  font-weight: 520 !important;
+}
+.cardBtn:hover {
+  background-color: #7110d1 !important;
+
+}

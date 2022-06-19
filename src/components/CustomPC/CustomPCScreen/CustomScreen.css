@@ -1,0 +1,244 @@
+.Maincontainer {
+  width: 100%;
+  height: 100%;
+  background-color: white !important;
+}
+.HeadText {
+  font-size: 40px;
+  margin-top: 20px;
+  text-align: center;
+  /* width: 30%; */
+  align-items: center;
+  color: white;
+  justify-content: center;
+}
+.TextStyle {
+  border-left: 12px solid #8a15fc;
+  border-right: 12px solid #8a15fc;
+  border-radius: 7px;
+  background-color: #313234;
+}
+.next {
+  float: right;
+  margin-right: 55px;
+  margin-top: 30px !important;
+  width: 205px;
+  height: 60px;
+  margin-top: -20px;
+  color: #ebdbfd;
+  background-color: #8a15fc !important;
+  border: none !important;
+  border-radius: 7px;
+  box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.2),
+    4px 8px 30px 10px rgba(0, 0, 0, 0.19);
+  font-size: 1.4rem;
+  font-weight: 520;
+  margin-bottom: 20px;
+}
+.next:hover {
+  background-color: #7110d1 !important;
+  padding-right: 10px;
+  transition: 0.5s;
+}
+
+.back {
+  margin-left: 30px !important;
+  margin-right: 80px;
+  margin-top: 30px !important;
+  width: 205px;
+  height: 60px;
+  margin-top: -20px;
+  color: #ebdbfd;
+  background-color: #8a15fc !important;
+  border: none !important;
+  border-radius: 7px;
+  box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.2),
+    4px 8px 30px 10px rgba(0, 0, 0, 0.19);
+  font-size: 1.4rem;
+  font-weight: 520;
+}
+.back:hover {
+  background-color: #7110d1 !important;
+  padding-right: 20px;
+  transition: 0.5s;
+}
+
+.btnFinishBuild {
+  float: right;
+  margin-right: 55px;
+  margin-top: 30px !important;
+  width: 225px;
+  height: 70px;
+  margin-top: -20px;
+  color: #ebdbfd;
+  background-color: #8a15fc !important;
+  border: none !important;
+  border-radius: 7px;
+  box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.2),
+    4px 8px 30px 10px rgba(0, 0, 0, 0.19);
+  font-size: 1.4rem;
+  font-weight: 520;
+  margin-bottom: 20px;
+}
+.btnFinishBuild:hover {
+  background-color: #7110d1 !important;
+  padding-right: 10px;
+}
+
+
+
+
+.content-section {
+  /* width: 100%; */
+  height: 100%;
+  position: absolute;
+  top: 130px;
+  left: 11%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.left-content {
+  width: 40%;
+  margin-top: 6rem;
+  margin-left: 10rem;
+}
+.left-content h2 {
+  background: linear-gradient(120deg, rgb(132, 111, 244), rgb(241, 118, 116));
+  background-clip: text;
+  display: inline-block;
+
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.left-content h1 {
+  padding: 1.8rem 0;
+  color: white;
+}
+/* .GradientText {
+  background: linear-gradient(120deg, rgb(132, 111, 244), rgb(241, 118, 116));
+  background-clip: text;
+  display: inline-block;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  margin-left: 8px;
+} */
+.right-content {
+  width: 60%;
+}
+.bchain-img {
+  position: absolute;
+  right: 13%;
+  top: 4%;
+  width: 37%;
+  height: 65%;
+}
+
+/* .btn {
+  background: linear-gradient(130deg, #395ff6, #eb3fa9);
+  padding: 0.9rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+
+  transition: all 0.4s ease-in-out;
+}
+
+.btn:hover {
+  transition: all 0.4s ease-in-out;
+  background: linear-gradient(120deg, #eb3fa9, #395ff6);
+} */
+
+.trend-container {
+  margin-top: 1rem;
+  width: 100%;
+  height: 800px;
+}
+
+.trend-heading {
+  margin-top: 1rem;
+  background: linear-gradient(120deg, rgb(132, 111, 244), rgb(241, 118, 116));
+  background-clip: text;
+  display: inline-block;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  text-align: left;
+  font-size: 1.5rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-style: normal;
+  letter-spacing: 0.2rem;
+}
+
+.product-container {
+  margin-top: 1rem;
+
+  width: 99.7%;
+  height: 550px;
+}
+.next {
+  text-transform: uppercase;
+  /* background: linear-gradient(130deg, #395ff6, #eb3fa9); */
+  padding: 0.9rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  align-self: flex-end;
+  letter-spacing: 2px;
+}
+.gpuicon {
+  filter: invert(100%);
+  height: 200px;
+  width: 200px;
+  margin-left: 80px;
+}
+.cpuicon {
+  filter: invert(100%);
+  height: 200px;
+  width: 200px;
+  margin-left: 80px;
+}
+.cpuicon2 {
+  filter: invert(100%);
+  height: 200px;
+  width: 200px;
+  margin-left: 80px;
+}
+.barcontainer {
+  border-width: 100;
+  border-color: black;
+}
+.progressbar {
+  background-color: #313234;
+}
+.barCompleted {
+  background-color: green;
+  width: 0%;
+}
+.barCompleted1 {
+  background-color: green;
+  width: 14%;
+}
+.arrow {
+  border: solid rgb(233, 223, 223);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 5px;
+
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  margin-right: 15px;
+}

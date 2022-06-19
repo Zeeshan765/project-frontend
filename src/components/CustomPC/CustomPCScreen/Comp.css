@@ -1,0 +1,142 @@
+.container {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .video-section {
+    width: 100%;
+    height: 85vh;
+    position: relative;
+    overflow: hidden;
+  }
+  .bg-video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+  }
+  .circle-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: -400px;
+    top: -300px;
+  }
+  .content-section {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 130px;
+    left: 11%;
+  
+    display: flex;
+    justify-content: center;
+  }
+  
+  .left-content {
+    width: 40%;
+    margin-top: 6rem;
+    margin-left: 10rem;
+  }
+  .left-content h2 {
+    background: linear-gradient(120deg, rgb(132, 111, 244), rgb(241, 118, 116));
+    background-clip: text;
+    display: inline-block;
+  
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+  
+  .left-content h1 {
+    padding: 1.8rem 0;
+    color: white;
+  }
+  .GradientText {
+    background: linear-gradient(120deg, rgb(132, 111, 244), rgb(241, 118, 116));
+    background-clip: text;
+    display: inline-block;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    margin-left: 8px;
+  }
+  .right-content {
+    width: 60%;
+  }
+  .bchain-img {
+    position: absolute;
+    right: 13%;
+    top: 4%;
+    width: 37%;
+    height: 65%;
+  }
+  
+  .btn {
+    text-transform: uppercase;
+    background: linear-gradient(130deg, #395ff6, #eb3fa9);
+    padding: 0.9rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+  
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .btn:hover {
+    transition: all 0.4s ease-in-out;
+    background: linear-gradient(120deg, #eb3fa9, #395ff6);
+  }
+  
+  .trend-container {
+    margin-top: 1rem;
+    width: 100%;
+    height: 800px;
+  }
+  
+  .trend-heading {
+    margin-top: 1rem;
+    background: linear-gradient(120deg, rgb(132, 111, 244), rgb(241, 118, 116));
+    background-clip: text;
+    display: inline-block;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    text-align: left;
+    font-size: 1.5rem;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-style: normal;
+    letter-spacing: 0.2rem;
+  }
+  
+  .product-container {
+    margin-top: 1rem;
+  
+    width: 99.7%;
+    height: 550px;
+  }
+  .next {
+    text-transform: uppercase;
+    background: linear-gradient(130deg, #395ff6, #eb3fa9);
+    padding: 0.9rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    align-self: flex-end;
+  }
+  .barcontainer {
+    border-width: 100;
+    border-color: black;
+  }
+  .barCompleted {
+    background-color: green;
+    width: 0%;
+  }
+  .barCompleted1 {
+    background-color: green;
+    width: 14%;
+  }
+  

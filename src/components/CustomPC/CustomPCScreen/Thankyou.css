@@ -1,0 +1,18 @@
+.continueShopBtn {
+  width: 352px;
+  height: 60px;
+  border-radius: 12px !important;
+  color: #ebdbfd;
+  background-color: #8a15fc !important;
+  box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.2),
+    4px 8px 30px 10px rgba(0, 0, 0, 0.19);
+  border: none !important;
+  margin-left: -16px;
+  margin-bottom: -9px;
+  font-size: 1.1rem !important;
+  font-weight: 520 !important;
+}
+.continueShopBtn:hover {
+  background-color: #7110d1 !important;
+  transition: 0.5s;
+}

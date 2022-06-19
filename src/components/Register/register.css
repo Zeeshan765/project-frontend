@@ -1,0 +1,22 @@
+.form-data {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+.label-2 {
+  font-size: 1.5rem;
+}
+.text-1 {
+  width: 15%;
+  height: 30px;
+}
+.btn-1 {
+  background-color: blue;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  padding: 2px;
+}

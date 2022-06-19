@@ -1,0 +1,124 @@
+#ReqcardStyle{
+  background-color: #1b1b1b;
+  border: none;
+  box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.2), 4px 8px 30px 10px rgba(63, 60, 65, 0.19) !important;
+  margin-top: 40px;
+  }
+  
+  
+
+  .ReqimgStyle{
+    height: 250px;
+  }
+  .Reqcard-btnView{
+    /* background-color: #8A15FC; */
+    /* border: none; */
+    width: 353px;
+    height: 60px;
+    border-radius: 4px !important;
+    color: #EBDBFD;
+    background-color: #8A15FC !important;
+    box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.2), 4px 8px 30px 10px rgba(0, 0, 0, 0.19);
+    border: none !important;
+    margin-left: -17px;
+    margin-bottom: 9px;
+    font-size: 1.1rem !important;
+    font-weight: 520 !important;
+  }
+  .Reqcard-btnView:hover{
+    background-color: #7110d1 !important;
+    width: 353px !important;
+  }
+  
+
+  .Reqcard-btnCheck{
+    /* background-color: #8A15FC; */
+    /* border: none; */
+    width: 353px;
+    height: 60px;
+    border-radius: 4px !important;
+    color: #EBDBFD;
+    background-color: #8A15FC !important;
+    box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.2), 4px 8px 30px 10px rgba(0, 0, 0, 0.19);
+    border: none !important;
+    margin-left: -17px;
+    margin-bottom: -9px;
+    font-size: 1.1rem !important;
+    font-weight: 520 !important;
+  }
+  .Reqcard-btnCheck:hover{
+    background-color: #7110d1 !important;
+    width: 353px !important;
+  }
+
+.pc-container {
+  margin: 0px 10px;
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  width: 99%;
+  height: 550px;
+}
+.product-box {
+  margin-top: 2rem;
+  background-color: white;
+  width: 300px;
+  height: 500px;
+  border: 1px solid rgb(0, 0, 0);
+  background: #101424;
+}
+
+.upper-box {
+  height: 150px;
+  width: 100%;
+}
+
+.upper-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.upper-box img:hover {
+  border: 1px solid red;
+  cursor: pointer;
+}
+.lower-box {
+  height: 60%;
+  width: 100%;
+  background-color: white;
+
+  text-align: center;
+}
+.lower-box h3 {
+  margin-top: 8px;
+  font-family: inherit;
+  font-weight: bold;
+}
+.lower-box h4 {
+  margin-top: 8px;
+  font-family: inherit;
+  font-weight: normal;
+}
+
+.lower-box p {
+  margin-top: 8px;
+  text-align: center;
+  font-family: inherit;
+  font-weight: normal;
+}
+.btn-1 {
+  padding: 8px;
+  margin-top: 1rem;
+  width: 170px;
+  font-size: 1rem;
+  color: white;
+  background-color: rgb(226, 50, 147);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn-1:hover {
+  background-color: rgb(107, 22, 177);
+}

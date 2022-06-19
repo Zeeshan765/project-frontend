@@ -1,0 +1,11 @@
+.TrendingProduct-container {
+  margin: 0px 10px;
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 99%;
+  height: 550px;
+}

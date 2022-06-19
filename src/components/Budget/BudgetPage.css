@@ -1,0 +1,69 @@
+.budget-container {
+  margin-top: 1rem;
+  width: 100%;
+  position: relative;
+  height: 650px;
+  
+}
+.cardDesc {
+  text-align: center;
+}
+.budget-title {
+  margin-top: 6px;
+  background-color: rgb(207, 46, 73);
+  width: 100%;
+  text-align: center;
+}
+.budget-title h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(247, 236, 236);
+}
+
+.budget-wrapper {
+  margin-top: 1rem;
+  width: 100%;
+  height: 550px;
+  display: flex;
+  justify-content: space-around;
+}
+.budget-box {
+  margin-top: 2.5rem;
+  border: 2px solid blue;
+
+  width: 370px;
+  height: 480px;
+}
+.first-half {
+  width: 100%;
+  height: 260px;
+  
+}
+.first-half img {
+  width: 100%;
+  height: 260px;
+  opacity: 0.9;
+  object-fit: cover;
+}
+
+.second-half {
+  margin-top: 4px;
+  width: 100%;
+  height: 210px;
+  text-align: center;
+  
+}
+.second-half h2 {
+  margin-top: 1.5rem;
+  background: linear-gradient(120deg, rgb(132, 111, 244), rgb(241, 118, 116));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.second-half h3 {
+  margin-top: 1rem;
+  color: rgb(160, 146, 146);
+}
+.second-half h4 {
+  margin-top: 1rem;
+  color: rgb(201, 190, 190);
+}

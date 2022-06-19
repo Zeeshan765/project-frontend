@@ -1,2 +1,2 @@
-# project-frontend
- This is the project frontend
+# frontend-app
+ This is the Frontend of our application

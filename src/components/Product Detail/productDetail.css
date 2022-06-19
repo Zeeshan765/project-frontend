@@ -1,0 +1,113 @@
+.content {
+  padding: 4% 12%;
+  margin-top: 2px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pro-review {
+  margin-top: 1rem;
+  font-size: 40px;
+  text-align: center;
+  /* width: 30%; */
+  align-items: center;
+  color: white;
+  justify-content: center;
+}
+.TextStyle{
+  border-left: 12px solid #8a15fc;
+  border-right: 12px solid #8a15fc;
+  border-radius: 7px;
+  background-color: #313234;
+}
+
+.main-detail {
+  width: 670px;
+  height: 670px;
+  margin-right: 2rem;
+}
+.detail-image {
+  margin-top: 3rem;
+
+  width: 100px;
+  height: 100px;
+}
+.prodata {
+  margin-top: 10px;
+  margin-right: 4px;
+  margin-left: 2rem;
+  width: 800px;
+  height: 500px;
+
+  color: aliceblue;
+}
+.content {
+  background-color: #313234 !important;
+  height: 90vh;
+}
+.color-nav {
+  background-color: black !important;
+  padding: 15px;
+  margin-bottom: 0;
+}
+.titleText {
+  font-size: 45px;
+  margin-top: 5px;
+
+  font-weight: bold;
+}
+.desc {
+  font-style: italic;
+  font-size: 15px;
+}
+.priceText {
+  font-size: large;
+  font-weight: bold;
+}
+.cartBtn {
+  width: 35% !important;
+  height: 55px !important;
+  font-size: 25px;
+  margin-top: 20px;
+  border-radius: 16px;
+  color: #dfd3eb;
+  background-color: blueviolet;
+  border-color: blueviolet;
+}
+.btnInc {
+  width: 30% !important;
+  height: 15% !important;
+  font-size: 25px;
+  border-radius: 20px;
+  margin-top: 20px;
+  color: black;
+  background-color: #d2c9d6;
+}
+.btnDec {
+  width: 30% !important;
+  height: 15% !important;
+  font-size: 25px;
+  border-radius: 20px;
+  margin-top: 20px;
+  color: black;
+  margin-right: 20px;
+  background-color: #d2c9d6;
+}
+.buttonss {
+  display: flex;
+  justify-content: center;
+  margin-right: 400px;
+}
+.countText {
+  margin-top: 18px;
+  margin-right: 20px;
+  font-size: 30px;
+}
+.additioninfo {
+  margin-top: 10px;
+
+  font-weight: bold;
+}
