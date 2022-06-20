@@ -3,27 +3,72 @@
   /* width: 100%;
   height: 400vh; */
 }
-.IconStyle{
+.IconStyle {
   color: #9630fc;
-  background-color: rgb(33, 31, 34);
-  font-size: 52px !important;
+  background-color: #1d1c1c !important;
+  font-size: 51px !important;
   margin-top: 4px;
-
 }
-.priceRangeText{
-  color: #efe7f8;
-  text-align: center;
+#basic-addon1 {
+  background-color: #1d1c1c !important;
+  border: none !important;
+  box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.2),
+    4px 8px 30px 10px rgba(63, 60, 65, 0.19) !important;
 }
-.sliderText{
-  font-size: large;
+.search {
+  padding: 10px;
+  margin-left: 600px;
+  width: 440px;
+  font-size: 20px;
+  background-color: rgb(33, 31, 34);
+  color: white;
+  border-right: none;
 }
-.filterBox{
-  width: 30vh;
-  padding-bottom: 40px;
+.mb-4 {
+  width: 35%;
+  padding: 10px;
+  margin-left: 900px;
+  /* float: right; */
+  margin-bottom: 150px;
+  margin-top: -70px;
+  width: 440px;
   
 }
+.SearchBarnew {
+  background-color: #1d1c1c !important;
+  color: #ebe5f1 !important;
+  border: none !important;
+  box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.2),
+    4px 8px 30px 10px rgba(63, 60, 65, 0.19) !important;
+}
+.MuiSlider-track{
 
-.filterBox2{
+  height: 4px !important;
+}
+.PrivateValueLabel-label-10{
+  font-size: 15px;
+  margin-bottom: 50px;
+  margin-left: 44px;
+}
+.priceRangeText {
+  color: #efe7f8;
+  text-align: center;
+  font-size: 18px !important;
+}
+.sliderText {
+margin-top: 30px;
+  font-weight: bold;
+  border: 4px !important;
+  color: #892be7 !important;
+  width: 250px !important;
+  height: 10px !important;
+}
+.filterBox {
+  width: 30vh;
+  padding-bottom: 40px;
+}
+
+.filterBox2 {
   width: 30vh;
   padding-bottom: 10px;
   margin-top: -50px;
@@ -36,16 +81,6 @@
   align-self: center;
   color: #0a0a0a;
   border: 3px solid;
-}
-
-.search {
-  padding: 10px;
-  margin-left: 600px;
-  width: 440px;
-  font-size: 20px;
-  background-color: rgb(33, 31, 34);
-  color: white;
-  border-right: none;
 }
 
 .mainTitle {
@@ -69,7 +104,7 @@
   height: 100%;
 }
 .left-container {
-  width: 380px;
+  width: 410px;
   display: flex;
   flex-direction: column;
   background-color: #1b1b1b;
@@ -117,26 +152,26 @@
   font-size: 14px;
 }
 
-.paginationUP{
+.paginationUP {
   background-color: #fff;
   background: none;
   margin-top: -30px;
   justify-content: center;
-  margin-left: 140px; 
+  margin-left: 140px;
 }
-.pagination{
+.pagination {
   background-color: #fff;
   background: none;
   margin-top: 30px;
-  justify-content: center;  
+  justify-content: center;
 }
 
-.paginationText{
+.paginationText {
   font-size: 18px;
   width: 100%;
   margin-top: -55px;
 }
-.paginationTextUP{
+.paginationTextUP {
   font-size: 18px;
   width: 80%;
   margin-top: -52px;

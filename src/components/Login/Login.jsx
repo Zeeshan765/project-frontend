@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "auto",
     marginRight: "auto",
     paddingBottom: 0,
-    marginTop: "50px",
+    marginTop: "20px",
     fontWeight: 500,
   },
   input: {
@@ -78,6 +78,7 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     fontSize: "18px",
     marginTop: "40px",
+    marginLeft: "40px",
   },
   SignText: {
     color: "white",

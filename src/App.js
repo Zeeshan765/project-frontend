@@ -89,10 +89,11 @@ const App = () => {
           <Route path="/view-myorder/:id" exact component={Vieworder} />
           <Route path="/Custom-cart" exact component={CustomCart} />
         </Switch>
+        <Footer />;
       </Router>
     </>
   );
 };
-<Footer />;
+
 
 export default App;

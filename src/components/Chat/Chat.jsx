@@ -10,6 +10,7 @@ import Popup from "reactjs-popup";
 import NavigationIcon from "@material-ui/icons/Navigation";
 import { hover } from "@testing-library/user-event/dist/hover";
 import apiService from "../../services/ApiService"
+import { Send } from "@material-ui/icons";
 import "./Chat.css"
 import Messages from "./Messages";
 const useStyles = makeStyles((theme) => ({
@@ -183,10 +184,10 @@ const handleSubmit = async (e) => {
                 {" "}
               </textarea>
               <button className="chatSubmitButton" onClick={handleSubmit}>
-                Send
+              <Send className="sendIcon" />
               </button>
             </div>
-                            </Box>
+                            </Box> 
               </Popover>
             </div>
           )}

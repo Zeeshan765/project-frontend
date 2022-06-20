@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
   link: {
     textDecoration: "none",
     width: "100px",
-    color: "#ad69f0",
+    color: "white",
     padding: "7px",
     fontSize: "20px",
     fontWeight: "bold",

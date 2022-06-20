@@ -63,7 +63,7 @@ const Landing = () => {
         </div>
       </div> */}
       <Chat />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

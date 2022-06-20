@@ -10,13 +10,20 @@
     align-items: center;
     justify-content: space-between;
   }
-  
+  .chatSubmitButton{
+    background: none !important;
+  }
+  .sendIcon{
+    color: rgb(134, 30, 155);
+    font-size: 40px !important;
+  }
   .chatMessageInput {
     width: 85%;
     font-size: 18px;
     height: 70px;
     margin-left: 2px;
     padding: 10px;
+    border: none;
   }
   .chatSubmitButton {
     width: 70px;

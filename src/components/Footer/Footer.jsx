@@ -3,7 +3,13 @@ import "./Footer.css";
 
 
 import { FaPhone,FaFacebook,FaInstagram,FaGoogle,FaHome } from 'react-icons/fa';
-
+import ContactMailIcon from '@material-ui/icons/ContactMail';
+import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
+import RoomIcon from '@material-ui/icons/Room';
+import EmailIcon from '@material-ui/icons/Email';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import InstagramIcon from '@material-ui/icons/Instagram';
 
 import React, { Component } from "react";
 
@@ -86,14 +92,9 @@ class Footer extends Component {
               <div className="col-md-8">
                 <div className="text-center">
                   <div className="title-icon">
-                    <i className="mdi mdi-lock-open-outline" />
+                  <ContactMailIcon className="icons" />
                   </div>
                   <h3 className="section-title text-white pt-5">Contact us</h3>
-                  <p className="section-subtitle pt-3 text-whte">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
                 </div>
               </div>
             </div>
@@ -102,23 +103,25 @@ class Footer extends Component {
                 <div className="row mt-5">
                   <div className="col-lg-4">
                     <div className="single-contact text-center text-white">
-                      <i className="mdi mdi-cellphone" />
+                    <PhoneAndroidIcon className="icons" />
                       <h4>Phone</h4>
-                      <p>000-111-222 333</p>
+                      <p>+92 300 6889886</p>
+                      <p>+92 322 5589072</p>
+                      <p>+92 309 5196521</p>
                     </div>
                   </div>
                   <div className="col-lg-4">
                     <div className="single-contact text-center text-white">
-                      <i className="mdi mdi-map-marker" />
+                    <RoomIcon className="icons" />
                       <h4>Address</h4>
-                      <p>011, Williams Lane USA</p>
+                      <p>COMSATS, Lahore</p>
                     </div>
                   </div>
                   <div className="col-lg-4">
                     <div className="single-contact text-center text-white">
-                      <i className="mdi mdi-email-outline" />
+                    <EmailIcon className="icons" />
                       <h4>Email</h4>
-                      <p>info@example.com</p>
+                      <p>support@moc.com</p>
                     </div>
                   </div>
                 </div>
@@ -201,10 +204,6 @@ class Footer extends Component {
                     </div>
                     <div className="row justify-content-center">
                       <div className="col-md-8">
-                        <p className="text-center submit-terms mb-0 mt-3">
-                          Lorem ipsum dolor sit amet, sed do eiusmod tempor
-                          incididunt ut labore et dolore magna aliqua.
-                        </p>
                       </div>
                     </div>
                   </form>
@@ -214,26 +213,24 @@ class Footer extends Component {
             <div className="row mt-5 pt-5 pb-2">
               <div className="col-md-12">
                 <div className="text-white footer-alt">
-                  <div className="float-left">
-                    <p className="copyright-desc pb-0">
-                      2019 © Steix. All Rights Reserved
-                    </p>
-                  </div>
                   <div className="float-right">
                     <ul className="list-inline social pb-0">
+                    <li className="list-inline-item pl-2">
+                        Connect with us: 
+                      </li>
                       <li className="list-inline-item pl-2">
                         <Link to="#" className="text-white">
-                          <i className="mdi mdi-facebook" />
+                        <FacebookIcon />
                         </Link>
                       </li>
                       <li className="list-inline-item pl-2">
                         <Link to="#" className="text-white">
-                          <i className="mdi mdi-twitter" />
+                        <TwitterIcon />
                         </Link>
                       </li>
                       <li className="list-inline-item pl-2">
                         <Link to="#" className="text-white">
-                          <i className="mdi mdi-instagram" />
+                        <InstagramIcon />
                         </Link>
                       </li>
                     </ul>

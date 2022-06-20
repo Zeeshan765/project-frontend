@@ -30,7 +30,7 @@ const CarouselComp = () => {
             </Carousel.Caption>{" "}
           </div>
         </Carousel.Item>
-        <Carousel.Item interval={3000}>
+        <Carousel.Item interval={1500}>
           <img className="m-block w-55" src={car3} alt="Third slide" />
           <div>
             <Carousel.Caption className="caption">

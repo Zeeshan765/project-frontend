@@ -5,6 +5,8 @@ import Pagination from "@material-ui/lab/Pagination";
 import Typography from "@material-ui/core/Typography";
 import SingleComponent from "./SingleComponent";
 import apiService from "../../services/ApiService";
+import Form from "react-bootstrap/Form";
+import InputGroup from "react-bootstrap/InputGroup";
 
 import {
   AccountBox,
@@ -77,14 +79,26 @@ const ComponentsPage = (props) => {
       <div className="MainContainer">
         <div className="mainTitle">
           Components
-          <input
+          <InputGroup className="mb-4">
+            <InputGroup.Text id="basic-addon1">
+              {" "}
+              <Search className="IconStyle" />
+            </InputGroup.Text>
+            <Form.Control
+            className="SearchBarnew"
+              placeholder="Search the components"
+              aria-label="Search"
+              aria-describedby="basic-addon1"
+              onChange={(e) => setKeyword(e.target.value.toLowerCase())}
+            />
+          </InputGroup>
+          {/* <input
             className="search"
             placeholder="Search..."
             onChange={(e) => setKeyword(e.target.value.toLowerCase())}
           />
-          <Search className="IconStyle" />{" "}
+          <Search className="IconStyle" />{" "} */}
         </div>
-       
       </div>
       <div className="peripheral-container">
         <div className="left-container">

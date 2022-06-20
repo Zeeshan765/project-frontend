@@ -9,6 +9,9 @@ import axios from "axios";
 import apiService from "../../services/ApiService";
 import Singleperipheral from "./Singleperipheral";
 import Pagination from "@material-ui/lab/Pagination";
+import Form from "react-bootstrap/Form";
+import InputGroup from "react-bootstrap/InputGroup";
+
 
 import {
   AccountBox,
@@ -96,12 +99,19 @@ const PeripheralPage = (props) => {
       <div className="MainContainer">
         <div className="mainTitle">
           Peripherals{" "}
-          <input
-            className="search"
-            placeholder="Search..."
-            onChange={(e) => setKeyword(e.target.value.toLowerCase())}
-          />
-          <Search className="IconStyle" />{" "}
+          <InputGroup className="mb-4">
+            <InputGroup.Text id="basic-addon1">
+              {" "}
+              <Search className="IconStyle" />
+            </InputGroup.Text>
+            <Form.Control
+            className="SearchBarnew"
+              placeholder="Search the peripherals"
+              aria-label="Search"
+              aria-describedby="basic-addon1"
+              onChange={(e) => setKeyword(e.target.value.toLowerCase())}
+            />
+          </InputGroup>
         </div>
         
         <div className="peripheral-container">
