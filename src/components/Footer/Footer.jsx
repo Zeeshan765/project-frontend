@@ -1,15 +1,19 @@
-
 import "./Footer.css";
 
-
-import { FaPhone,FaFacebook,FaInstagram,FaGoogle,FaHome } from 'react-icons/fa';
-import ContactMailIcon from '@material-ui/icons/ContactMail';
-import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
-import RoomIcon from '@material-ui/icons/Room';
-import EmailIcon from '@material-ui/icons/Email';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import InstagramIcon from '@material-ui/icons/Instagram';
+import {
+  FaPhone,
+  FaFacebook,
+  FaInstagram,
+  FaGoogle,
+  FaHome,
+} from "react-icons/fa";
+import ContactMailIcon from "@material-ui/icons/ContactMail";
+import PhoneAndroidIcon from "@material-ui/icons/PhoneAndroid";
+import RoomIcon from "@material-ui/icons/Room";
+import EmailIcon from "@material-ui/icons/Email";
+import FacebookIcon from "@material-ui/icons/Facebook";
+import TwitterIcon from "@material-ui/icons/Twitter";
+import InstagramIcon from "@material-ui/icons/Instagram";
 
 import React, { Component } from "react";
 
@@ -21,7 +25,7 @@ class Footer extends Component {
     this.state = {
       email: "",
       name: "",
-      subject: "",  
+      subject: "",
       message: "",
       email_err: "",
       name_err: "",
@@ -40,7 +44,8 @@ class Footer extends Component {
 
   handleChangeEmail(e) {
     this.setState({ email: e.target.value });
-    var EmailReg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var EmailReg =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (e.target.value === "") this.setState({ email_err: "Required Field" });
     else if (EmailReg.test(e.target.value)) this.setState({ email_err: "" });
     else this.setState({ email_err: "Enter Valid Email" });
@@ -85,161 +90,76 @@ class Footer extends Component {
 
   render() {
     return (
-      
-        <section className="pt-5 bg-dark" id="contact">
-          <div className="container">
-            <div className="row justify-content-center pt-5">
-              <div className="col-md-8">
-                <div className="text-center">
-                  <div className="title-icon">
+      <section className="pt-5 bg-dark" id="contact">
+        <div className="container">
+          <div className="row justify-content-center pt-5">
+            <div className="col-md-8">
+              <div className="text-center">
+                <div className="title-icon">
                   <ContactMailIcon className="icons" />
-                  </div>
-                  <h3 className="section-title text-white pt-5">Contact us</h3>
                 </div>
+                <h3 className="section-title text-white pt-5">Contact us</h3>
               </div>
             </div>
-            <div className="row justify-content-center">
-              <div className="col-lg-8">
-                <div className="row mt-5">
-                  <div className="col-lg-4">
-                    <div className="single-contact text-center text-white">
+          </div>
+          <div className="row justify-content-center">
+            <div className="col-lg-8">
+              <div className="row mt-5">
+                <div className="col-lg-4">
+                  <div className="single-contact text-center text-white">
                     <PhoneAndroidIcon className="icons" />
-                      <h4>Phone</h4>
-                      <p>+92 300 6889886</p>
-                      <p>+92 322 5589072</p>
-                      <p>+92 309 5196521</p>
-                    </div>
+                    <h4>Phone</h4>
+                    <p>+92 300 6889886</p>
+                    <p>+92 322 5589072</p>
+                    <p>+92 309 5196521</p>
                   </div>
-                  <div className="col-lg-4">
-                    <div className="single-contact text-center text-white">
+                </div>
+                <div className="col-lg-4">
+                  <div className="single-contact text-center text-white">
                     <RoomIcon className="icons" />
-                      <h4>Address</h4>
-                      <p>COMSATS, Lahore</p>
-                    </div>
+                    <h4>Address</h4>
+                    <p>COMSATS, Lahore</p>
                   </div>
-                  <div className="col-lg-4">
-                    <div className="single-contact text-center text-white">
+                </div>
+                <div className="col-lg-4">
+                  <div className="single-contact text-center text-white">
                     <EmailIcon className="icons" />
-                      <h4>Email</h4>
-                      <p>support@moc.com</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="row justify-content-center mt-5">
-              <div className="col-lg-8 bg-white p-5 mt-4 rounded">
-                <div className="custom-form">
-                  <div id="message">
-                    {this.state.flag ? (
-                      <div className="alert alert-success">
-                        <strong>{this.state.return_msg}</strong>
-                      </div>
-                    ) : null}
-                  </div>
-                  <form method="post" name="contact-form" id="contact-form">
-                    <div className="row">
-                      <div className="col-lg-6 mt-3">
-                        <input
-                          type="text"
-                          id="name"
-                          value={this.state.name}
-                          onChange={this.handleChangeName}
-                          className="form-control"
-                          placeholder="First name"
-                        />
-                        <span id="err">{this.state.name_err}</span>
-                      </div>
-                      <div className="col-lg-6 mt-3">
-                        <input
-                          type="text"
-                          id="email"
-                          className="form-control"
-                          value={this.state.email}
-                          onChange={this.handleChangeEmail}
-                        //   id="exampleInputEmail1"
-                          placeholder="Enter email"
-                        />
-                        <span id="err">{this.state.email_err}</span>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-lg-12 mt-3">
-                        <input
-                          type="text"
-                          id="subject"
-                          value={this.state.subject}
-                          onChange={this.handleChangeSubject}
-                          className="form-control"
-                        //   id="subject"
-                          placeholder="Your Subject.."
-                        />
-                        <span id="err">{this.state.subject_err}</span>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-lg-12 mt-3">
-                        <textarea
-                          name="comments"
-                          id="comments"
-                          value={this.state.message}
-                          onChange={this.handleChangeMessage}
-                          rows="6"
-                          className="form-control"
-                          placeholder="Your message..."
-                        />
-                        <span id="err">{this.state.message_err}</span>
-                      </div>
-                    </div>
-                    <div className="mt-4 text-center">
-                      <input
-                        type="button"
-                        id="submit"
-                        name="send"
-                        onClick={this.handleSubmit1}
-                        className="submitBnt btn btn-custom"
-                        value="Submit"
-                      />
-                      <div id="simple-msg" />
-                    </div>
-                    <div className="row justify-content-center">
-                      <div className="col-md-8">
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-            <div className="row mt-5 pt-5 pb-2">
-              <div className="col-md-12">
-                <div className="text-white footer-alt">
-                  <div className="float-right">
-                    <ul className="list-inline social pb-0">
-                    <li className="list-inline-item pl-2">
-                        Connect with us: 
-                      </li>
-                      <li className="list-inline-item pl-2">
-                        <Link to="#" className="text-white">
-                        <FacebookIcon />
-                        </Link>
-                      </li>
-                      <li className="list-inline-item pl-2">
-                        <Link to="#" className="text-white">
-                        <TwitterIcon />
-                        </Link>
-                      </li>
-                      <li className="list-inline-item pl-2">
-                        <Link to="#" className="text-white">
-                        <InstagramIcon />
-                        </Link>
-                      </li>
-                    </ul>
+                    <h4>Email</h4>
+                    <p>support@moc.com</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+
+          <div className="row mt-5 pt-5 pb-2">
+            <div className="col-md-12">
+              <div className="text-white footer-alt">
+                <div className="float-right">
+                  <ul className="list-inline social pb-0">
+                    <li className="list-inline-item pl-2">Connect with us:</li>
+                    <li className="list-inline-item pl-2">
+                      <Link to="#" className="text-white">
+                        <FacebookIcon />
+                      </Link>
+                    </li>
+                    <li className="list-inline-item pl-2">
+                      <Link to="#" className="text-white">
+                        <TwitterIcon />
+                      </Link>
+                    </li>
+                    <li className="list-inline-item pl-2">
+                      <Link to="#" className="text-white">
+                        <InstagramIcon />
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     );
   }
 }

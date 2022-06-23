@@ -24,7 +24,7 @@ const Landing = () => {
     <div className="land-cointainer">
       <div className="video-section">
         <div className="bgfull">
-          <img width="2020" height="900" src={bg}></img>
+          <img width="1797" height="900" src={bg}></img>
         </div>
         <div className="content-section">
           <div className="left-content">
