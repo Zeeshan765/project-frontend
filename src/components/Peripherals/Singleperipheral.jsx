@@ -11,11 +11,16 @@ import {
   Button,
 } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
+import Rating from '@material-ui/lab/Rating';
 
 const Singleperipheral = (props) => {
   const { data } = props;
   const id = data._id;
   const history = useHistory();
+  const rating = data.rating;
+// const[rating,setRating]=React.useState(0);
+// setRating(data.rating);
+const[reviewcount,setReviewcount] = React.useState("");
 
   //View Detail Click Function
   const handleView = () => {
@@ -34,7 +39,9 @@ const Singleperipheral = (props) => {
               style={{ width: "22rem" }}
               className="card text-white"
               id="cardStyle"
+              
             >
+              {/* setRating(data.rating); */}
               <Card.Img
                 className="imgStyle"
                 variant="top"
@@ -45,11 +52,16 @@ const Singleperipheral = (props) => {
                 <Card.Title>{data.name}</Card.Title>
                 <Card.Text>
                   <h4>{data.price}</h4>
-                  <p>{data.description}</p>
+          <Rating name="read-only" value={rating} readOnly />({data.numReviews})
+
+                  {/* <p>{data.description}</p> */}
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
-                <Button onClick={handleView} className="card-btn">
+                <Button onClick={() => {
+                      handleView();
+                      // setRating(data.rating);
+                    }} className="card-btn">
                   View Details
                 </Button>
               </Card.Footer>

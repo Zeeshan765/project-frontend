@@ -4,6 +4,7 @@ import { toast } from 'react-toastify';
 import './productDetail.css';
 import { Typography } from '@material-ui/core';
 import ProductRating from './ProductRating';
+import Rating from '@material-ui/lab/Rating';
 
 const ProductDetail = (props) => {
   const [quantity, setQuantity] = useState(1);
@@ -29,7 +30,8 @@ const ProductDetail = (props) => {
   const [info2, setinfo2] = useState()
   const [info3, setinfo3] = useState()
   const [info4, setinfo4] = useState()
-
+const[reviewcount,setReviewcount]=useState("");
+const[ratingcount,setRatingcount]=useState(0);
   console.log({ name, price, description, image });
    React.useEffect(() => {
      apiService.get('/api/products/find/' + product).then((res) => {
@@ -43,6 +45,8 @@ const ProductDetail = (props) => {
        setinfo2(res.data.info2)
        setinfo3(res.data.info3)
        setinfo4(res.data.info4)
+       setReviewcount(res.data.numReviews);
+       setRatingcount(res.data.rating);
     });
   }, []);
   // const handleaddtocart = (temp) => {
@@ -111,6 +115,7 @@ React.useEffect(getCommentData, []);
         </div>
         <div className='prodata'>
           <p className='titleText'>Product: {name}</p>
+          <Rating name="read-only" value={ratingcount} readOnly />({reviewcount})
           <hr></hr>
        
           <h4 className='info1'>➤ {info1}</h4>

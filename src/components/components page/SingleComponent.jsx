@@ -12,6 +12,8 @@ import {
   Button,
 } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
+import Rating from '@material-ui/lab/Rating';
+
 // import Col from "react-bootstrap/Card";
 // import Row from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/Card";
@@ -21,6 +23,7 @@ const SingleComponent = (props) => {
   const { data } = props;
   const id = data._id;
   const history = useHistory();
+  const rating = data.rating;
 
   //View Detail Click Function
   const handleView = () => {
@@ -49,7 +52,8 @@ const SingleComponent = (props) => {
                 <Card.Title style={{fontSize: "19px"}}>{data.name}</Card.Title>
                 <Card.Text>
                   <h4 style={{fontSize: "17px"}}> Rs. {data.price}</h4>
-                  <p style={{fontSize: "14px"}}>{data.description}</p>
+                  <Rating name="read-only" value={rating} readOnly />({data.numReviews})
+                  {/* <p style={{fontSize: "14px"}}>{data.description}</p> */}
                 </Card.Text>
               </Card.Body>
               <Card.Footer>

@@ -30,7 +30,7 @@ const PeripheralPage = (props) => {
   const page = props.match.params.page ? props.match.params.page : 1;
   const [total, setTotal] = React.useState(0);
   const [perPage, setPerPage] = React.useState(8);
-
+ 
   //Get Data
   const getData = () => {
     apiService.getProducts(page, perPage).then((res) => {
