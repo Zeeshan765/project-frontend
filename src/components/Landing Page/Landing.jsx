@@ -12,6 +12,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Chat from "../Chat/Chat";
 import Footer from "../Footer/Footer";
 
+
 const Landing = () => {
   const history = useHistory();
 
@@ -24,7 +25,7 @@ const Landing = () => {
     <div className="land-cointainer">
       <div className="video-section">
         <div className="bgfull">
-          <img width="1797" height="900" src={bg}></img>
+          <img width="2020" height="900" src={bg}></img>
         </div>
         <div className="content-section">
           <div className="left-content">

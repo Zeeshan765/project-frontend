@@ -35,7 +35,8 @@ import UserOrder from "./components/my orders/UserOrder";
 import SimpleSuccess from "./components/order success/SimpleSuccess";
 import Thankyou from "./components/CustomPC/CustomPCScreen/Thankyou";
 import Vieworder from "./components/my orders/Vieworder";
-const App = () => {
+const App = ({history}) => {
+
   const [clicked, setClicked] = React.useState(null);
   const getClicked = () => {
     setClicked(new Date());

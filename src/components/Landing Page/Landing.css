@@ -52,8 +52,7 @@ color: #d5b1f8;
 .btnStart {
   width: 35% !important;
   height: 15% !important;
-  font-size: 27px !important;
-  border-radius: 20px;
+  font-size: 27px !important; 
   margin-top: 20px;
   color: #EBDBFD;
   border-radius: 15px !important;

@@ -33,6 +33,7 @@ import {
   CssBaseline,
 } from "@material-ui/core";
 import transitions from "@material-ui/core/styles/transitions";
+import { useLocation } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   navlinks: {
@@ -51,6 +52,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "7px",
     fontSize: "20px",
     fontWeight: "bold",
+    borderRadius: "10px",
     marginLeft: theme.spacing(8),
     "&:hover": {
       backgroundColor: "rgb(135, 62, 202)",
@@ -90,6 +92,14 @@ const handleorders = () => {
 };
 
 const TopMenu = (props) => {
+  const location = useLocation();
+  console.log(location.pathname);
+  const getColor = (currentPath) => {
+    if (location.pathname === currentPath) {
+      return "rgb(135, 62, 202)";
+      // console.log("#7110d1");
+    }
+  };
   const classes = useStyles();
   const [count, setCount] = useState("");
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -158,22 +168,22 @@ const TopMenu = (props) => {
           MoC
         </Typography>
         <div className={classes.navlinks}>
-          <Link to="/" className={classes.link}>
+          <Link style={{ backgroundColor: getColor("/") }} to="/" className={classes.link}>
             Home
           </Link>
-          <Link to="/components" className={classes.link}>
+          <Link style={{ backgroundColor: getColor("/components") }} to="/components" className={classes.link}>
             Components
           </Link>
-          <Link to="/peripherals" className={classes.link}>
+          <Link style={{ backgroundColor: getColor("/peripherals") }} to="/peripherals" className={classes.link}>
             Products
           </Link>
-          <Link to="/about-us" className={classes.link}>
+          <Link style={{ backgroundColor: getColor("/about-us") }} to="/about-us" className={classes.link}>
             About Us
           </Link>
         </div>
         <div className="icons">
           {!apiService.isLoggedIn() ? (
-            <Link to="/login">
+            <Link  to="/login">
               <AccountBox className={classes.iconLogin} />
             </Link>
           ) : (
