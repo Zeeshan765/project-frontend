@@ -5,7 +5,7 @@ import VisibilityOutlinedIcon from "@material-ui/icons/VisibilityOutlined";
 import "./userOrder.css";
 import { toast } from "react-toastify";
 
-const UserOrder = (props) => {
+const UserOrder = (props) => { 
   const [orders, setOrders] = useState([]);
 
   //Get User Orders

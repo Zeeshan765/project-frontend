@@ -30,13 +30,13 @@ import ComponentDetail from "./components/component Detail/ComponentDetail";
 import Cart from "./components/cart Page/Cart";
 import ChangePassword from "./components/ChangePassword/ChangePassword";
 import Order from "./components/order page/Order";
+import OrderHistory from "./components/my orders/OrderHistory";
 import Success from "./components/order success/Success";
 import UserOrder from "./components/my orders/UserOrder";
 import SimpleSuccess from "./components/order success/SimpleSuccess";
 import Thankyou from "./components/CustomPC/CustomPCScreen/Thankyou";
 import Vieworder from "./components/my orders/Vieworder";
-const App = ({history}) => {
-
+const App = ({ history }) => {
   const [clicked, setClicked] = React.useState(null);
   const getClicked = () => {
     setClicked(new Date());
@@ -83,6 +83,7 @@ const App = ({history}) => {
           <Route path="/Custom-Screen" exact component={CustomScreen} />
           <Route path="/order" exact component={Order} />
           <Route path="/myorders" exact component={UserOrder} />
+          <Route path="/orderhistory" exact component={OrderHistory} />
 
           <Route path="/Success" exact component={Success} />
           <Route path="/SimpleSuccess" exact component={SimpleSuccess} />
@@ -95,6 +96,5 @@ const App = ({history}) => {
     </>
   );
 };
-
 
 export default App;

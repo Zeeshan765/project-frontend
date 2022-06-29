@@ -1,26 +1,35 @@
-#cardStyle{
-background-color: #1b1b1b;
-border: none;
-box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.2), 4px 8px 30px 10px rgba(63, 60, 65, 0.19) !important;
-margin-top: 40px;
-height: 500px;
+#cardStyle {
+  background-color: #1b1b1b;
+  border: none;
+  box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.2),
+    4px 8px 30px 10px rgba(63, 60, 65, 0.19) !important;
+  margin-top: 40px;
+  height: 500px;
+}
+.rating {
+
+  border: none !important;
+  font-size: 20px !important;
+}
+.ratingtxt {
+  font-size: 20px;
 }
 
-
-.cardGroup{
+.cardGroup {
   margin-top: 35px;
-  background-color: #8A15FC !important;
+  color: #8a15fc !important;
 }
-.imgStyle{
+.imgStyle {
   height: 280px;
 }
-.card-btn{
+.card-btn {
   width: 352px;
   height: 60px;
   border-radius: 4px !important;
-  color: #EBDBFD;
-  background-color: #8A15FC !important;
-  box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.2), 4px 8px 30px 10px rgba(0, 0, 0, 0.19);
+  color: #ebdbfd;
+  background-color: #8a15fc !important;
+  box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.2),
+    4px 8px 30px 10px rgba(0, 0, 0, 0.19);
   border: none !important;
   margin-left: -16px;
   margin-bottom: -9px;
@@ -28,7 +37,7 @@ height: 500px;
   font-weight: 520 !important;
 }
 
-.card-btn:hover{
+.card-btn:hover {
   background-color: #7110d1 !important;
   width: 353px !important;
 }
@@ -52,7 +61,7 @@ height: 500px;
 .lower-box1 {
   height: 60%;
   width: 100%;
-color: white;
+  color: white;
   text-align: center;
 }
 .lower-box1 h3 {

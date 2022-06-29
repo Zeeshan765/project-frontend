@@ -7,6 +7,7 @@ import SingleComponent from "./SingleComponent";
 import apiService from "../../services/ApiService";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
+// import { useLocation } from "react-router-dom";
 
 import {
   AccountBox,
@@ -21,6 +22,15 @@ import {
 import "./ComponentsPage.css";
 
 const ComponentsPage = (props) => {
+  // const location = useLocation();
+  // console.log(location.pathname);
+  const getColor = (currentPath) => {
+    // if (location.pathname === currentPath) {
+    //   return "rgb(135, 62, 202)";
+    // }
+  };
+
+
   const [keyword, setKeyword] = useState("");
   const [menuData, setMenuData] = useState([]);
   const [price, setPrice] = useState([500, 100000]);
@@ -116,7 +126,7 @@ const ComponentsPage = (props) => {
 
             <Typography className="priceRangeText">Set price range</Typography>
           </div>
-          <button className="left-btn" onClick={() => getData()}>
+          <button  style={{ backgroundColor: getColor() }} className="left-btn" onClick={() => getData()}>
             All
           </button>
           <button

@@ -1,6 +1,6 @@
 import React ,{useEffect,useState} from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Fab from "@material-ui/core/Fab";
+import Fab from "@material-ui/core/Fab"; 
 import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import Popover from "@material-ui/core/Popover";
@@ -11,18 +11,20 @@ import NavigationIcon from "@material-ui/icons/Navigation";
 import { hover } from "@testing-library/user-event/dist/hover";
 import apiService from "../../services/ApiService"
 import { Send } from "@material-ui/icons";
+import ChatIcon from '@material-ui/icons/Chat';
 import "./Chat.css"
 import Messages from "./Messages";
 const useStyles = makeStyles((theme) => ({
   margin: {
     margin: theme.spacing(1),
     float: "right",
+    height: "70px",
     marginBottom: "10px",
     top: "auto",
     right: "auto",
     position: "fixed",
     bottom: "15px",
-    marginLeft: "1550px",
+    marginLeft: "1700px",
     backgroundColor: "#6d1ba8",
     "&:hover": {
       background: "#5f1694",
@@ -30,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
   extendedIcon: {
     marginRight: theme.spacing(1),
+    fontSize: "30px",
     float: "right",
     // position: "fixed",
   },
@@ -123,13 +126,13 @@ const handleSubmit = async (e) => {
                 {...bindTrigger(popupState)}
                 
               >
-                <NavigationIcon className={classes.extendedIcon} />
+                <ChatIcon className={classes.extendedIcon} />
                 Chat with experts
               </Fab>
               <Popover
                 {...bindPopover(popupState)}
                 anchorReference="anchorPosition"
-                anchorPosition={{ top: 520, left: 1660 }}
+                anchorPosition={{ top: 510, left: 1760 }}
                 anchorOrigin={{
                   vertical: "top",
                   horizontal: "center",
@@ -149,7 +152,7 @@ const handleSubmit = async (e) => {
                     mx: 1,
                     bgcolor: "#e6e6e6",
                     color: "background.paper",
-                    border: "1px solid",
+                    border: "none",
                     borderColor: (theme) =>
                       theme.palette.mode === "dark" ? "grey.800" : "grey.300",
                     borderRadius: 4,

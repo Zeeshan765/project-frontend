@@ -2,13 +2,17 @@
     height: 90%;
     overflow-y: scroll;
     padding-right: 10px;
+    border: none !important;
   }
   
   .chatBoxBottom {
     margin-top: 15px;
+    position: sticky;
+    bottom: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /* width: 110%; */
   }
   .chatSubmitButton{
     background: none !important;

@@ -52,9 +52,10 @@ const SingleComponent = (props) => {
                 <Card.Title style={{fontSize: "19px"}}>{data.name}</Card.Title>
                 <Card.Text>
                   <h4 style={{fontSize: "17px"}}> Rs. {data.price}</h4>
-                  <Rating name="read-only" value={rating} readOnly />({data.numReviews})
+                  <Rating name="read-only" className="rating" value={rating} readOnly /> <p className="ratingtxt">({data.numReviews})</p>
+                
                   {/* <p style={{fontSize: "14px"}}>{data.description}</p> */}
-                </Card.Text>
+                </Card.Text>  
               </Card.Body>
               <Card.Footer>
                 <Button onClick={handleView} className="card-btn">

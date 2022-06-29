@@ -39,6 +39,7 @@ const useStyles = makeStyles((theme) => ({
   navlinks: {
     marginRight: theme.spacing(100),
     marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(1.1),
   },
   logo: {
     flexGrow: "1",
@@ -49,16 +50,18 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: "none",
     width: "100px",
     color: "white",
-    padding: "7px",
+    padding: "25px",
     fontSize: "20px",
     fontWeight: "bold",
     borderRadius: "10px",
     marginLeft: theme.spacing(8),
+
     "&:hover": {
       backgroundColor: "rgb(135, 62, 202)",
       color: "#e0d3ed",
       transition: "0.5s",
       borderRadius: "10px",
+     
     },
   },
   iconLogin: {
@@ -89,6 +92,7 @@ const handleProfile = () => {
 };
 const handleorders = () => {
   window.location.href = "/myorders";
+  // window.location.href = "/orderhistory";
 };
 
 const TopMenu = (props) => {
@@ -193,15 +197,15 @@ const TopMenu = (props) => {
               trigger={<AccountBox className={classes.iconLogin} />}
               position="bottom center"
             >
-              <h4 className="editProfile" onClick={handleProfile}>
+              <h5 className="editProfile" onClick={handleProfile}>
                 View Profile
-              </h4>
-              <h4 className="editProfile" onClick={handleorders}>
+              </h5>
+              <h5 className="editProfile" onClick={handleorders}>
                 My Orders
-              </h4>
-              <h4 className="editProfile" onClick={handlelogout}>
+              </h5>
+              <h5 className="editProfile" onClick={handlelogout}>
                 Logout
-              </h4>
+              </h5>
             </Popup>
 
             //<button onClick={handlelogout}>Logout</button>
