@@ -5,9 +5,11 @@ import Pagination from "@material-ui/lab/Pagination";
 import Typography from "@material-ui/core/Typography";
 import SingleComponent from "./SingleComponent";
 import apiService from "../../services/ApiService";
+import { Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 // import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 import {
   AccountBox,
@@ -22,13 +24,7 @@ import {
 import "./ComponentsPage.css";
 
 const ComponentsPage = (props) => {
-  // const location = useLocation();
-  // console.log(location.pathname);
-  const getColor = (currentPath) => {
-    // if (location.pathname === currentPath) {
-    //   return "rgb(135, 62, 202)";
-    // }
-  };
+  
 
 
   const [keyword, setKeyword] = useState("");
@@ -84,6 +80,16 @@ const ComponentsPage = (props) => {
       setMenuData(res.data);
     });
   };
+
+  const location = useLocation();
+  console.log(location.pathname);
+  const getColor = (currentPath) => {
+    if (location.pathname === currentPath) {
+      return "#7110d1";
+      // console.log("#7110d1");
+    }
+  };
+
   return (
     <>
       <div className="MainContainer">
@@ -126,18 +132,23 @@ const ComponentsPage = (props) => {
 
             <Typography className="priceRangeText">Set price range</Typography>
           </div>
-          <button  style={{ backgroundColor: getColor() }} className="left-btn" onClick={() => getData()}>
+          <Link>
+          <li style={{ backgroundColor: getColor("") }} className="left-btn" onClick={() => getData()}>
             All
-          </button>
-          <button
+          </li>
+          </Link>
+
+          <Link>
+          <li style={{ backgroundColor: getColor("Processor") }}
             className="left-btn"
             onClick={() => {
               filterResult("Processor");
             }}
           >
             Processor
-          </button>
-          <button
+          </li>
+          </Link>
+          <button style={{ backgroundColor: getColor() }}
             className="left-btn"
             onClick={() => {
               filterResult("Gpu");

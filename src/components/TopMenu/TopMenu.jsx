@@ -5,7 +5,7 @@ import Account from "../../Assets/account.png";
 import Cart from "../../Assets/cart.png";
 import apiService from "../../services/ApiService";
 import Popup from "reactjs-popup";
-import "reactjs-popup/dist/index.css"; 
+import "reactjs-popup/dist/index.css";
 import "./TopMenu.css";
 import { useState, useEffect } from "react";
 import {
@@ -26,7 +26,7 @@ import {
   Menu,
   Typography,
   IconButton,
-  Toolbar, 
+  Toolbar,
   Box,
   AppBar,
   makeStyles,
@@ -61,7 +61,6 @@ const useStyles = makeStyles((theme) => ({
       color: "#e0d3ed",
       transition: "0.5s",
       borderRadius: "10px",
-     
     },
   },
   iconLogin: {
@@ -91,8 +90,9 @@ const handleProfile = () => {
   window.location.href = "/profile";
 };
 const handleorders = () => {
-  window.location.href = "/myorders";
+  // window.location.href = "/ordercomponent";
   // window.location.href = "/orderhistory";
+  window.location.href = "/myorders";
 };
 
 const TopMenu = (props) => {
@@ -172,22 +172,38 @@ const TopMenu = (props) => {
           MoC
         </Typography>
         <div className={classes.navlinks}>
-          <Link style={{ backgroundColor: getColor("/") }} to="/" className={classes.link}>
+          <Link
+            style={{ backgroundColor: getColor("/") }}
+            to="/"
+            className={classes.link}
+          >
             Home
           </Link>
-          <Link style={{ backgroundColor: getColor("/components") }} to="/components" className={classes.link}>
+          <Link
+            style={{ backgroundColor: getColor("/components") }}
+            to="/components"
+            className={classes.link}
+          >
             Components
           </Link>
-          <Link style={{ backgroundColor: getColor("/peripherals") }} to="/peripherals" className={classes.link}>
+          <Link
+            style={{ backgroundColor: getColor("/peripherals") }}
+            to="/peripherals"
+            className={classes.link}
+          >
             Products
           </Link>
-          <Link style={{ backgroundColor: getColor("/about-us") }} to="/about-us" className={classes.link}>
+          <Link
+            style={{ backgroundColor: getColor("/about-us") }}
+            to="/about-us"
+            className={classes.link}
+          >
             About Us
           </Link>
         </div>
         <div className="icons">
           {!apiService.isLoggedIn() ? (
-            <Link  to="/login">
+            <Link to="/login">
               <AccountBox className={classes.iconLogin} />
             </Link>
           ) : (

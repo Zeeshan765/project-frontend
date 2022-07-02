@@ -31,6 +31,7 @@ import Cart from "./components/cart Page/Cart";
 import ChangePassword from "./components/ChangePassword/ChangePassword";
 import Order from "./components/order page/Order";
 import OrderHistory from "./components/my orders/OrderHistory";
+import OrderComponent from "./components/my orders/OrderComponent";
 import Success from "./components/order success/Success";
 import UserOrder from "./components/my orders/UserOrder";
 import SimpleSuccess from "./components/order success/SimpleSuccess";
@@ -84,6 +85,7 @@ const App = ({ history }) => {
           <Route path="/order" exact component={Order} />
           <Route path="/myorders" exact component={UserOrder} />
           <Route path="/orderhistory" exact component={OrderHistory} />
+          <Route path="/ordercomponent" exact component={OrderComponent} />
 
           <Route path="/Success" exact component={Success} />
           <Route path="/SimpleSuccess" exact component={SimpleSuccess} />

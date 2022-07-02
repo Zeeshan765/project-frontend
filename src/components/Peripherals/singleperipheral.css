@@ -5,6 +5,13 @@
   border: 1px solid rgb(12, 12, 245);
   background: #101424;
 }
+.rating {
+  border: none !important;
+  font-size: 20px !important;
+}
+.ratingtxt {
+  font-size: 20px;
+}
 .upper-box1 {
   height: 200px;
   width: 100%;
