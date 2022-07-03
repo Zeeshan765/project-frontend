@@ -29,9 +29,10 @@ const KEY =
   "pk_test_51KjbNHLoabZssHHofWiLVgSqVV4cMVrz9Kjav5dCBTXNuDzCt2upUXymf3cDa9Ovb5dDjjJCopnKoo5GtSKV6axa00TuBA0197";
 const Order = () => {
   const history = useHistory();
-  const [address, setAddress] = useState({});
   const[line1,setLine1]=useState("");
-  const [city, setCity] = useState("Lahore");
+  const [city, setCity] = useState("");
+  const [address, setAddress] = useState({line1,city});
+
   const [phoneNumber, setPhoneNumber] = useState("");
   const [amount, setAmount] = useState("");
   const [items, setItems] = useState([]);
@@ -101,16 +102,16 @@ React.useEffect(() => {
     e.preventDefault();
 
     apiService
-      .post("/api/orders/newCustomOrder", {
-        address,
-        city,
+      .post("/api/orders/NewCustomOrders", {
+        address:{line1,city},
+        
         phoneNo: phoneNumber,
         amount,
         orderItems: items,
         type,
       })
       .then((res) => {
-      //  console.log("response");
+        console.log("response");
         console.log(res.data);
         toast.success("Order  has been Placed Successfully");
       history.push("/SimpleSuccess")
@@ -123,18 +124,18 @@ React.useEffect(() => {
 
       });
   };
-  const validation = (e) => {
-    e.preventDefault();
-    if (address === "") {
-      toast.error("Please Enter Address");
-    } else if (city === "") {
-      toast.error("Please Enter City");
-    }  else {
-      handleorder(e);
+  // const validation = (e) => {
+  //   e.preventDefault();
+  //   if (address === "") {
+  //     toast.error("Please Enter Address");
+  //   } else if (city === "") {
+  //     toast.error("Please Enter City");
+  //   }  else {
+  //     handleorder(e);
       
 
-    }
-  };
+  //   }
+  // };
   const useStyles = makeStyles((theme) => ({
     root: {
       marginTop: "-30px",
@@ -366,7 +367,7 @@ React.useEffect(() => {
                       }}
                       variant="filled"
                       margin="normal"
-                      value={address}
+                      value={line1}
                       color="secondary"
                       fullWidth
                       id="address"
@@ -375,7 +376,7 @@ React.useEffect(() => {
                       autoComplete="address"
                       autoFocus
                       onChange={(e) => {
-                        setAddress(e.target.value);
+                        setLine1(e.target.value);
                       }}
                     />
                     <br />
@@ -453,7 +454,7 @@ React.useEffect(() => {
                       Change Password{" "}
                     </Button> */}
                   </form>
-                  <Button className={classes.button} onClick={validation}>
+                  <Button className={classes.button} onClick={handleorder}>
                     Confirm Order
                   </Button>
                 </div>
