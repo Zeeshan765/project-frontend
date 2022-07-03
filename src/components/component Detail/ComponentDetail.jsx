@@ -3,7 +3,7 @@ import apiService from "../../services/ApiService";
 import { toast } from "react-toastify";
 import "./componentDetail.css";
 import { Typography } from "@material-ui/core";
-import Rating from "@material-ui/lab/Rating";
+
 import ComponentRating from "./ComponentRating";
 
 const ComponentDetail = (props) => {
@@ -22,8 +22,6 @@ const ComponentDetail = (props) => {
   const [info2, setinfo2] = useState();
   const [info3, setinfo3] = useState();
   const [info4, setinfo4] = useState();
-  const [reviewcount, setReviewcount] = useState("");
-  const [ratingcount, setRatingcount] = useState(0);
   const [site, setSite] = useState();
   console.log({ name, price, description, image });
 
@@ -93,22 +91,21 @@ const ComponentDetail = (props) => {
         <div className="prodata">
           <p className="titleText">{name}</p>
           <hr></hr>
-          <Rating
-            className="rating"
-            name="read-only"
-            value={ratingcount}
-            readOnly
-          />{" "}
-          <span className="ratingtxt">({reviewcount})</span>
+
           <hr></hr>
           <h4 className="info1">➤ {info1}</h4>
+
           <br />
           <h4 className="info1">➤ {info2}</h4>
+
           <br />
           <h4 className="info1">➤ {info3}</h4>
+
           <br />
           <h4 className="info1">➤ {info4}</h4>
+
           <br />
+
           <p className="additioninfo">Addition information </p>
           <a className="site" target="_blank" href={site}>
             View Product on Company's site
@@ -119,6 +116,7 @@ const ComponentDetail = (props) => {
           <p className="priceText"> Rs. {price} </p>
           <br />
           <hr></hr>
+
           <div className="buttonss">
             <button
               style={{ height: "30px", width: "100px" }}
