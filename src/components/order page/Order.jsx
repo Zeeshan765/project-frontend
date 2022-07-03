@@ -29,7 +29,8 @@ const KEY =
   "pk_test_51KjbNHLoabZssHHofWiLVgSqVV4cMVrz9Kjav5dCBTXNuDzCt2upUXymf3cDa9Ovb5dDjjJCopnKoo5GtSKV6axa00TuBA0197";
 const Order = () => {
   const history = useHistory();
-  const [address, setAddress] = useState("");
+  const [address, setAddress] = useState({});
+  const[line1,setLine1]=useState("");
   const [city, setCity] = useState("Lahore");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [amount, setAmount] = useState("");
