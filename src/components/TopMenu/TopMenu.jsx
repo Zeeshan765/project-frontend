@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Account from "../../Assets/account.png";
-import Logo from "../../Assets/logo.png";
 // import pcbuildicon from "../../Assets/pcbuildicon.png";
 import Cart from "../../Assets/cart.png";
 import apiService from "../../services/ApiService";
@@ -170,7 +169,7 @@ const TopMenu = (props) => {
       <CssBaseline />
       <Toolbar>
         <Typography variant="h4" className={classes.logo}>
-          <img className="logomoc" src={Logo} alt="" />
+          MoC
         </Typography>
         <div className={classes.navlinks}>
           <Link
