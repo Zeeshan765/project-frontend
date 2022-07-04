@@ -17,6 +17,18 @@ const UserOrder = (props) => {
   };
   React.useEffect(getData, []);
 
+  // status type color
+  const statusColor = (status) => {
+    if (status === "Pending") {
+      return "#cf9f0e";
+    } else if (status === "Delivered") {
+      return "#28a745";
+    } else if (status === "cancelled") {
+      return "#dc3545";
+    }
+  };
+
+
   return (
     <>
       {orders.length == 0 ? (
@@ -35,8 +47,8 @@ const UserOrder = (props) => {
             {orders.map((order, index) => (
               <tr key={index}>
                 <td>{order._id}</td>
-                <td>{order.amount}</td>
-                <td>{order.status}</td>
+                <td>Rs. {order.amount}</td>
+                <td style={{ color: statusColor(order.status) }} >{order.status}</td>
                 <td>
                   <VisibilityOutlinedIcon
                     onClick={(e) => {
