@@ -15,6 +15,7 @@ const MidBudgetPage = () => {
   return (
     <>
       <div className="midbudget-container">
+      <p className="section-title ">Mid-Range PCs</p>
         {products
           .filter((products) => products.category === "med budget")
           .map((products, index) => (
