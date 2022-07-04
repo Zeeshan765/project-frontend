@@ -9,9 +9,9 @@ const Success = (props) => {
 
   const data = location.state.stripeData;
   const cart = location.state.orderItems;
-//   console.log("hey");
+   console.log("hey");
 //   console.log(props)
-//   console.log(cart)
+  console.log(cart)
   const amount = location.state.amount;
   //const currentUser = useSelector((state) => state.user.currentUser);
   const [orderId, setOrderId] = useState(null);
@@ -24,7 +24,7 @@ const handlereturn = ()=>{
         const res = await apiService.post('/api/orders/NewCustomOrders', {
           //userId: currentUser._id,
           orderItems: cart.map((item) => ({
-            productname: item.name,
+            name: item.name,
             price: item.price,
             product: item._id,
             quantity: item.quantity,
