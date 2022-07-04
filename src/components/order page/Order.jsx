@@ -38,6 +38,7 @@ const Order = () => {
   const [items, setItems] = useState([]);
   const [selectedOption, setSelectedOption] = useState("cod");
   const [stripeToken, setStripeToken] = useState(null);
+  const [dc,setDc]=useState(0);
   const type = "Cash On Delivery";
   //console.log(token)
   console.log("items");
@@ -58,6 +59,20 @@ React.useEffect(() => {
   const onToken = (token) => {
     setStripeToken(token);
   };
+  function setDeliveryCharges(DCity){
+    if(DCity=="Lahore"){
+      setDc(100);
+      
+    }
+    if(DCity=="Islamabad"){
+      setDc(150);
+    
+    }
+    if(DCity=="Karachi"){
+      setDc(200);
+     
+    }
+  }
 
   //Handle Radio Button Function
   function handleChange(e) {
@@ -86,7 +101,7 @@ React.useEffect(() => {
         const res = await apiService.post("/api/checkout/payment", {
           tokenId: stripeToken.id,
           //amount: {amount},
-          amount: amount,
+          amount: amount
         });
         history.push("/Success", {
           stripeData: res.data,
@@ -106,7 +121,7 @@ React.useEffect(() => {
         address:{line1,city},
         
         phoneNo: phoneNumber,
-        amount,
+        amount:amount+dc,
         orderItems: items,
         type,
       })
@@ -302,7 +317,7 @@ React.useEffect(() => {
             ))}
             <br />
             <tr>
-              <td>Total: {amount} RS/-</td>
+              <td>Total: {amount+dc} RS/-</td>
             </tr>
           </tbody>
         </table>
@@ -397,12 +412,13 @@ React.useEffect(() => {
                         label="City"
                         onChange={(e) => {
                           setCity(e.target.value);
+                          setDeliveryCharges(e.target.value);
                         }}
                       >
                         <MenuItem value={"Lahore"}>Lahore</MenuItem>
-                        <MenuItem value={"Sheikhupura"}>Karachi</MenuItem>
+                        <MenuItem value={"Karachi"}>Karachi</MenuItem>
 
-                        <MenuItem value={"Gujranwala"}>Islamabad</MenuItem>
+                        <MenuItem value={"Islamabad"}>Islamabad</MenuItem>
                       </Select>
                     </InputLabel>
 

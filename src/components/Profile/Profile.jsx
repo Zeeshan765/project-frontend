@@ -10,10 +10,12 @@ import Avatar from "@material-ui/core/Avatar";
 //import Paper from '@material-ui/core/Paper';
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-
+import validator from "validator";
 import { deepOrange } from "@material-ui/core/colors";
 import swal from "sweetalert";
+import { Toast } from "bootstrap";
 export default function Profile(props) {
+  const[edit,setEdit]=useState(false);
   //Get Logged In User Data
   React.useEffect(() => {
     apiService.get("api/user/find").then((res) => {
@@ -23,6 +25,52 @@ export default function Profile(props) {
       setPhone(res.data.phone);
     });
   }, []);
+function EditsEnabled(){
+  setEdit(true);
+}
+const validateEmail = (email) => {
+  if (validator.isEmail(email)) {
+    return true;
+  } else {
+    return false;
+  }
+};
+function EditsDisabled(){
+  setEdit(false);
+}
+const emailValidation = (email) => {
+  if (validator.isEmail(email)) {
+    return true;
+  } else {
+    return false;
+  }
+};
+const userNameValidation = (name) => {
+  if (name.length >= 5 && name.length <= 15) {
+    return true;
+  } else {
+    return false;
+  }
+};
+const phoneValidation = (phone) => {
+  if (
+    phone.length === 11 &&
+    phone.startsWith("03") &&
+    phone.match(/^[0-9]+$/)
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+};
+function allValidation(name, email, phone) {
+  console.log(name, email, phone);
+  if (userNameValidation(name) && emailValidation(email) && phoneValidation(phone)) {
+    handleupdate(name, email, phone);
+  } else {
+    toast.error("Please Enter Valid Data");
+  }
+}
 
   function handleupdate() {
     apiService
@@ -93,7 +141,15 @@ export default function Profile(props) {
     submit: {
       margin: theme.spacing(3, 0, 2),
     },
-    textField: {
+    textField:
+     {  "&:disabled": {
+      color: "white",
+      backgroundColor: "#fff",
+      
+      
+    }
+    ,
+      
       width: "100%",
       marginLeft: "auto",
       marginRight: "auto",
@@ -101,7 +157,16 @@ export default function Profile(props) {
       marginTop: "50px",
       fontWeight: 500,
     },
+
     input: {
+      
+      "&:disabled": {
+        color: "black",
+        backgroundColor: "#fff",
+        
+        
+      }
+      ,
       color: "white",
       backgroundColor: "#362245",
       height: 80,
@@ -114,6 +179,15 @@ export default function Profile(props) {
       color: "white",
       padding: "30px",
       marginLeft: "10px",
+    },
+    Cpbutton: {
+      backgroundColor: "#362245",
+      fontSize: "20px",
+      fontWeight: 500,
+      color: "white",
+      padding: "30px",
+      marginLeft: "10px",
+      marginTop: "10px",
     },
     checkBox: {
       color: "white",
@@ -194,6 +268,8 @@ export default function Profile(props) {
             </Typography>
             <form className={classes.form} noValidate>
               <TextField
+            
+              style={{ backgroundColor: "#362245" }}
                 className={classes.textField}
                 InputLabelProps={{ className: classes.floatingLabelFocusStyle }}
                 InputProps={{
@@ -209,12 +285,20 @@ export default function Profile(props) {
                 name="email"
                 autoComplete="email"
                 autoFocus
+                disabled={!edit}
                 onChange={(e) => {
                   setEmail(e.target.value);
                 }}
+                helperText={
+                  emailValidation(email)
+                    ? " "
+                    : "Email is not valid"
+                }
+                error={!emailValidation(email)}
               />
               <br />
               <TextField
+               style={{ backgroundColor: "#362245" }}
                 className={classes.textField}
                 InputLabelProps={{ className: classes.floatingLabelFocusStyle }}
                 InputProps={{
@@ -224,6 +308,7 @@ export default function Profile(props) {
                 margin="normal"
                 color="secondary"
                 fullWidth
+                disabled={!edit}
                 value={name}
                 id="name"
                 label="User Name"
@@ -233,9 +318,16 @@ export default function Profile(props) {
                 onChange={(e) => {
                   setName(e.target.value);
                 }}
+                helperText={
+                  userNameValidation(name)
+                    ? " "
+                    : "User Name must be between 5 to 15 characters"
+                }
+                error={!userNameValidation(name)}
               />
               <br />
               <TextField
+                    style={{ backgroundColor: "#362245" }}
                 className={classes.textField}
                 InputLabelProps={{ className: classes.floatingLabelFocusStyle }}
                 InputProps={{
@@ -245,6 +337,7 @@ export default function Profile(props) {
                 margin="normal"
                 color="secondary"
                 fullWidth
+                disabled={!edit}
                 value={phone}
                 id="Phone"
                 label="Phone"
@@ -254,6 +347,13 @@ export default function Profile(props) {
                 onChange={(e) => {
                   setPhone(e.target.value);
                 }}
+                helperText={
+                  phoneValidation(phone)
+                    ? " "
+                    : "Must begin with 03 and 11 digits"
+                }
+                error={!phoneValidation(phone)}
+           
               />
               <Grid
                 container
@@ -268,14 +368,23 @@ export default function Profile(props) {
                 spacing={4}
                 style={{ padding: 20 }}
               ></Grid>
-              <Button className={classes.button} onClick={handleupdate}>
+              <div >
+              <Button className={classes.button} onClick={EditsEnabled}>
+                {" "}
+                Edit{" "}
+              </Button>
+              <Button
+              disabled={!edit}
+               className={classes.button} onClick={()=>allValidation(name,email,phone)}>
                 {" "}
                 Update{" "}
               </Button>
-              <Button className={classes.button} onClick={handlechange}>
+            
+              <Button className={classes.Cpbutton} onClick={handlechange}>
                 {" "}
                 Change Password{" "}
               </Button>
+              </div>
             </form>
           </div>
         </Grid>
