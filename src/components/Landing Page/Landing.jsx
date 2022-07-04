@@ -170,7 +170,7 @@ const Landing = () => {
                   </h3>
                 </div>
                 <div className="plan-name mt-4">
-                  <h6>Low Budget</h6>
+                  <h4>Low Budget</h4>
                 </div>
                 <div className="plan-desc mt-4">
                   <p className="mb-0 ">
@@ -178,7 +178,7 @@ const Landing = () => {
                   </p>
                 </div>
                 <div className="mt-5">
-                  <Link to="/budget/lowbudget" className="btn btn-custom btn-rounded">
+                  <Link to="/budget/lowbudget" className="btn btn-custom btn-rounded btnbuynow">
                     Buy Now!
                   </Link>
                 </div>
@@ -196,7 +196,7 @@ const Landing = () => {
                   </h3>
                 </div>
                 <div className="plan-name mt-4">
-                  <h6>Mid-Range Budget</h6>
+                  <h4>Mid-Range Budget</h4>
                 </div>
                 <div className="plan-desc mt-4">
                   <p className="mb-0 ">
@@ -204,7 +204,7 @@ const Landing = () => {
                   </p>
                 </div>
                 <div className="mt-5">
-                  <Link to="/budget/midbudget" className="btn btn-custom btn-rounded">
+                  <Link to="/budget/midbudget" className="btn btn-custom btn-rounded btnbuynow">
                     Buy Now!
                   </Link>
                 </div>
@@ -218,7 +218,7 @@ const Landing = () => {
                   </h3>
                 </div>
                 <div className="plan-name mt-4">
-                  <h6>High-End Budget</h6>
+                  <h4>High-End Budget</h4>
                 </div>
                 <div className="plan-desc mt-4">
                   <p className="mb-0 ">
@@ -226,7 +226,7 @@ const Landing = () => {
                   </p>
                 </div>
                 <div className="mt-5">
-                  <Link to="/budget/highbudget" className="btn btn-custom btn-rounded">
+                  <Link to="/budget/highbudget" className="btn btn-custom btn-rounded btnbuynow">
                     Buy Now!
                   </Link>
                 </div>

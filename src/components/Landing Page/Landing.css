@@ -137,18 +137,18 @@
 .features-more {
   color: #6362b8 !important;
 }
-#features{
+#features {
   background-color: white;
   margin-top: 150px;
 }
-.boldfont{
+.boldfont {
   font-weight: bold;
   font-size: 25px;
 }
-.pt-2{
+.pt-2 {
   font-size: 20px;
 }
-.section-title{
+.section-title {
   font-size: 40px;
   font-weight: bold;
   color: #792eaa;
@@ -156,7 +156,7 @@
   text-align: center;
   width: 100%;
 }
-.section-subtitle{
+.section-subtitle {
   font-size: 30px;
   font-weight: bold;
   color: #792eaa;
@@ -176,16 +176,24 @@
 .plan-lable p {
   font-weight: 700;
 }
-.price-box{
+.price-box {
   /* background-color: #2e2e2e !important; */
   color: white !important;
 }
-#pricing{
+#pricing {
   background-color: #ebebeb !important;
   /* background-image: url("bgp.jpeg"); */
 }
 
-#pricing{
-  background-color: white !important;
+#pricing {
+  background-color: rgb(252, 243, 243) !important;
+  padding-top: 40px;
 
+}
+.mb-0 {
+  font-size: 18px;
+}
+.btnbuynow{
+  margin-left: 35px;
+  width: 150px;
 }
