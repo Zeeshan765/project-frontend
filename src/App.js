@@ -36,6 +36,7 @@ import UserOrder from "./components/my orders/UserOrder";
 import SimpleSuccess from "./components/order success/SimpleSuccess";
 import Thankyou from "./components/CustomPC/CustomPCScreen/Thankyou";
 import Vieworder from "./components/my orders/Vieworder";
+import NewView from "./components/my orders/NewView";
 const App = ({ history }) => {
   const [clicked, setClicked] = React.useState(null);
   const getClicked = () => {
@@ -90,6 +91,7 @@ const App = ({ history }) => {
           <Route path="/SimpleSuccess" exact component={SimpleSuccess} />
           <Route path="/thankyou-custom" exact component={Thankyou} />
           <Route path="/view-myorder/:id" exact component={Vieworder} />
+          <Route path="/vieworder/:id" exact component={NewView} />
           <Route path="/Custom-cart" exact component={CustomCart} />
         </Switch>
         <Footer />;

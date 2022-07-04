@@ -122,10 +122,15 @@ console.log(orderid)
                 </td>
 
                 <td>
-                 <button   onClick={() => {
-                      handleView();
-                       setOrderid(order._id);
-                    }}>
+                 <button   
+                 onClick={(e) => {
+                  //console.log("navigate to update");
+                  
+                    props.history.push("/vieworder/" + order._id);
+                   
+                }}
+                 
+                 >
                   View Order
                  </button>
 

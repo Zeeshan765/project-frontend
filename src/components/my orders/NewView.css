@@ -1,0 +1,21 @@
+.inputCom{
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .add-comment{
+    color: white;
+  background-color: black;
+  width: 200px;
+  height: 30px;
+  margin-left: 10px;
+  font-size: large;
+  }
+
+  .post-btn{
+    color: white;
+  background-color: black;
+  width: 100px;
+  height: 30px;
+  margin-left: 10px;
+  font-size: large;
+  }
