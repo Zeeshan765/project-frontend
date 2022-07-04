@@ -124,18 +124,18 @@ React.useEffect(() => {
 
       });
   };
-  // const validation = (e) => {
-  //   e.preventDefault();
-  //   if (address === "") {
-  //     toast.error("Please Enter Address");
-  //   } else if (city === "") {
-  //     toast.error("Please Enter City");
-  //   }  else {
-  //     handleorder(e);
+  const validation = (e) => {
+    e.preventDefault();
+    if (line1 === "") {
+      toast.error("Please Enter Address");
+    } else if (city === "") {
+      toast.error("Please Enter City");
+    }  else {
+      handleorder(e);
       
 
-  //   }
-  // };
+    }
+  };
   const useStyles = makeStyles((theme) => ({
     root: {
       marginTop: "-30px",
@@ -400,9 +400,9 @@ React.useEffect(() => {
                         }}
                       >
                         <MenuItem value={"Lahore"}>Lahore</MenuItem>
-                        <MenuItem value={"Sheikhupura"}>Sheikhupura</MenuItem>
+                        <MenuItem value={"Sheikhupura"}>Karachi</MenuItem>
 
-                        <MenuItem value={"Gujranwala"}>Gujranwala</MenuItem>
+                        <MenuItem value={"Gujranwala"}>Islamabad</MenuItem>
                       </Select>
                     </InputLabel>
 
@@ -454,7 +454,7 @@ React.useEffect(() => {
                       Change Password{" "}
                     </Button> */}
                   </form>
-                  <Button className={classes.button} onClick={handleorder}>
+                  <Button className={classes.button} onClick={validation}>
                     Confirm Order
                   </Button>
                 </div>

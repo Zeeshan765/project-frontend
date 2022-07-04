@@ -14,7 +14,22 @@
     flex: 4;
     padding-top: 40px;
   }
- 
+  .close-btn{
+    color: white;
+    background-color: red;
+    width: 100px;
+    height: 30px;
+    margin-left: 10px;
+    margin-top: -4px;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 4px;
+    float: right;
+  }
+  .close-btn:hover{
+    background-color: black;
+  }
+  
   .data-table {
     margin-top: 1%;
     font-family: Arial, Helvetica, sans-serif;

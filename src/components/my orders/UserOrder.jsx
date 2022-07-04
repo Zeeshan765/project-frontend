@@ -1,21 +1,84 @@
 import React, { useState } from "react";
 import apiService from "../../services/ApiService";
 import VisibilityOutlinedIcon from "@material-ui/icons/VisibilityOutlined";
-
+import { Modal, Box } from '@material-ui/core';
 import "./userOrder.css";
 import { toast } from "react-toastify";
 
 const UserOrder = (props) => { 
   const [orders, setOrders] = useState([]);
+  const [orders1, setOrders1] = useState([]);
+
+  const[orderid,setOrderid]=useState(null);
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+console.log(orderid)
+
+  const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 800,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+  };
+
+
+  function handleView(order) {
+    apiService.get("/api/orders/mysinglefind/" + orderid).then((res) => {
+           setOrders1(res.data.orderItems);
+          console.log("single")
+          handleOpen();
+      //   // console.log(res.data.orderItems[1]);
+        });
+    // setOpen(true);
+  }
+
 
   //Get User Orders
   const getData = () => {
     apiService.get("/api/orders/myorders").then((res) => {
       setOrders(res.data);
-      console.log(res.data);
+      // setOrders1(res.data.orderItems)
+      // console.log(res.data);
     });
   };
   React.useEffect(getData, []);
+
+
+
+//find single order by id
+// const getData1 = () => {
+//   // apiService.get("/api/orders/myorders").then((res) => {
+//   //   setOrders1(res.data.filter((order) => order._id === orderid));
+//   //   console.log(res.data);
+//   // });
+//    apiService.get("/api/orders/mysinglefind/" + orderid).then((res) => {
+//     setOrders1(res.data.filter((order) => order._id === orderid));
+//     console.log("single")
+//     // console.log(res.data.orderItems[1]);
+//   });
+// };
+// React.useEffect(getData1, []);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   return (
     <>
@@ -28,6 +91,8 @@ const UserOrder = (props) => {
               <th>Order Id</th>
               <th>Order Amount</th>
               <th>Order Status</th>
+              <th>Action</th>
+              <th>View Order</th>
               <th>Post Review</th>
             </tr>
           </thead>
@@ -37,6 +102,22 @@ const UserOrder = (props) => {
                 <td>{order._id}</td>
                 <td>{order.amount}</td>
                 <td>{order.status}</td>
+                <td>
+                 <button>
+                  Cancel Order
+                 </button>
+
+                </td>
+
+                <td>
+                 <button   onClick={() => {
+                      handleView(order);
+                       setOrderid(order._id);
+                    }}>
+                  View Order
+                 </button>
+
+                </td>
                 <td>
                   <VisibilityOutlinedIcon
                     onClick={(e) => {
@@ -57,6 +138,52 @@ const UserOrder = (props) => {
           </tbody>
         </table>
       )}
+
+
+
+
+
+
+<Modal
+          // className="modal"
+          open={open}
+          onClose={handleClose}
+          aria-labelledby='modal-modal-title'
+          aria-describedby='modal-modal-description'
+        >
+          <Box sx={style}>
+          <button className="close-btn" onClick={handleClose}>
+            CLOSE
+          </button>
+          <table className="data-table">
+          <thead>
+            <tr>
+              <th>Product Name</th>
+              <th>Product Price</th>
+              <th>Product Quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+            {/* {orders.map((order, index) => ( */}
+            {orders1.map((order1, index) => (
+              <tr key={index}>
+            
+              
+                <td>{order1.name}</td>
+                <td>{order1.price}</td>
+                <td>{order1.quantity}</td>
+                              </tr>
+                              
+                              ))}
+            {/* ))} */}
+          </tbody>
+        </table>
+            
+          </Box>
+        </Modal>
+
+
+
     </>
   );
 };

@@ -86,7 +86,7 @@ const Vieworder = (props) => {
         <tbody>
           {orders[0]?.orderItems.map((order, index) => (
             <tr key={index}>
-              <td>{order._id}</td>
+              <td>{order.name}</td>
               <td>{order.price}</td>
               <td>
                 <button
