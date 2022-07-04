@@ -50,34 +50,16 @@ console.log(orderid)
   };
   React.useEffect(getData, []);
 
-
-
-//find single order by id
-// const getData1 = () => {
-//   // apiService.get("/api/orders/myorders").then((res) => {
-//   //   setOrders1(res.data.filter((order) => order._id === orderid));
-//   //   console.log(res.data);
-//   // });
-//    apiService.get("/api/orders/mysinglefind/" + orderid).then((res) => {
-//     setOrders1(res.data.filter((order) => order._id === orderid));
-//     console.log("single")
-//     // console.log(res.data.orderItems[1]);
-//   });
-// };
-// React.useEffect(getData1, []);
-
-
-
-
-
-
-
-
-
-
-
-
-
+  // status type color
+  const statusColor = (status) => {
+    if (status === "Pending") {
+      return "#cf9f0e";
+    } else if (status === "Delivered") {
+      return "#28a745";
+    } else if (status === "cancelled") {
+      return "#dc3545";
+    }
+  };
 
 
   return (
@@ -100,8 +82,8 @@ console.log(orderid)
             {orders.map((order, index) => (
               <tr key={index}>
                 <td>{order._id}</td>
-                <td>{order.amount}</td>
-                <td>{order.status}</td>
+                <td>Rs. {order.amount}</td>
+                <td style={{ color: statusColor(order.status) }} >{order.status}</td>
                 <td>
                  <button>
                   Cancel Order
