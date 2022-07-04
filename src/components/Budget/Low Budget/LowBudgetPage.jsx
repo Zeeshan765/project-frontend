@@ -17,6 +17,7 @@ const LowBudgetPage = (props) => {
   return (
     <>
       <div className="lowbudget-container">
+        <p className="section-title ">Low Budget PCs</p>
         {products
           .filter((product) => product.category === "low budget")
           .map((product, index) => (

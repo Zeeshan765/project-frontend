@@ -18,6 +18,7 @@ const HighBudgetPage = () => {
   return (
     <>
       <div className="highbudget-container">
+      <p className="section-title ">High-End PCs</p>
         {products
           .filter((product) => product.category === "high budget")
           .map((product, index) => (

@@ -34,7 +34,7 @@
   font-size: 45px;
 }
 .TextPC {
-color: #d5b1f8;
+  color: #d5b1f8;
   display: inline-block;
   margin-left: 8px;
 }
@@ -52,18 +52,18 @@ color: #d5b1f8;
 .btnStart {
   width: 35% !important;
   height: 15% !important;
-  font-size: 27px !important; 
+  font-size: 27px !important;
   margin-top: 20px;
-  color: #EBDBFD;
+  color: #ebdbfd;
   border-radius: 15px !important;
-  background-color: #8A15FC !important;
+  background-color: #8a15fc !important;
   transition: all 0.4s ease-in-out !important;
   border: none !important;
 }
 
 .btnStart:hover {
   background-color: #7110d1 !important;
-  color: #EBDBFD;
+  color: #ebdbfd;
 }
 
 .trendContainer {
@@ -118,4 +118,82 @@ color: #d5b1f8;
   /* width: 99.7%;
   height: 650px; */
   color: aliceblue;
+}
+
+.features-icon {
+  font-size: 40px;
+}
+
+.features-desc h5 {
+  font-size: 20px;
+  color: #000;
+}
+
+.features-more i {
+  position: relative;
+  top: 1px;
+}
+
+.features-more {
+  color: #6362b8 !important;
+}
+#features {
+  background-color: white;
+  margin-top: 150px;
+}
+.boldfont {
+  font-weight: bold;
+  font-size: 25px;
+}
+.pt-2 {
+  font-size: 20px;
+}
+.section-title {
+  font-size: 40px;
+  font-weight: bold;
+  color: #792eaa;
+
+  text-align: center;
+  width: 100%;
+}
+.section-subtitle {
+  font-size: 30px;
+  font-weight: bold;
+  color: #792eaa;
+  text-align: center;
+  width: 100%;
+}
+
+.plan-price h2 {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.plan-name h6 {
+  font-size: 22px;
+}
+
+.plan-lable p {
+  font-weight: 700;
+}
+.price-box {
+  /* background-color: #2e2e2e !important; */
+  color: white !important;
+}
+#pricing {
+  background-color: #ebebeb !important;
+  /* background-image: url("bgp.jpeg"); */
+}
+
+#pricing {
+  background-color: rgb(252, 243, 243) !important;
+  padding-top: 40px;
+
+}
+.mb-0 {
+  font-size: 18px;
+}
+.btnbuynow{
+  margin-left: 35px;
+  width: 150px;
 }
