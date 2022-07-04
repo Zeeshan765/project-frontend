@@ -40,13 +40,16 @@ const useStyles = makeStyles((theme) => ({
 
 const Chat = (props) => {
   const classes = useStyles();
-  const [chat,setChat]= useState(null)
+  const [chat,setChat]= useState(null);
+  const[name,setName]=useState("");
   const [newMessage, setNewMessage] = React.useState("");
   const [messages, setMessages] = React.useState([]);
 const[user,setUser]=useState(null)
 const admin = "628afd313fdfbb446dbf3bbd";
 console.log("chat");
 console.log(chat)
+console.log("name");
+console.log(name)
   //post connection with admin
   const handleconnection = () => {
     apiService.post("/api/chat/create",
@@ -58,6 +61,7 @@ console.log(chat)
       console.log(res.data);
       setChat(res.data._id);
       setUser(res.data.user);
+      setName(res.data.admin.name);
        //console.log(res.data._id)
     }
     );
@@ -162,7 +166,7 @@ const handleSubmit = async (e) => {
                 >
                   {/* <Typography sx={{textAlign: "center", marginLeft:"4rem",fontSize: "0.875rem",
                     fontWeight: "700",}}>ok.</Typography> */}
-                    <h4>Admin</h4>
+                    <h4>{name}</h4>
                     <hr />
                     <div className="chatBoxTop">
                       {/* <h1>ok</h1> */}
