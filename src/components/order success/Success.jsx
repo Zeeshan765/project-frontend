@@ -21,7 +21,7 @@ const handlereturn = ()=>{
   useEffect(() => {
     const createOrder = async () => {
       try {
-        const res = await apiService.post('/api/orders/newCustomOrder', {
+        const res = await apiService.post('/api/orders/NewCustomOrders', {
           //userId: currentUser._id,
           orderItems: cart.map((item) => ({
             productname: item.name,
@@ -35,6 +35,7 @@ const handlereturn = ()=>{
           address: data.billing_details.address,
         });
         setOrderId(res.data._id);
+        console.log(res.data._id);
       } catch {}
     };
     data && createOrder();
