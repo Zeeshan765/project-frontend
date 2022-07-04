@@ -18,7 +18,8 @@ const Vieworder = (props) => {
   const [currentOrdertype, setCurrentOrdertype] = useState(null);
 
   const product = props.match.params.id;
-
+console.log("orders");
+console.log(orders)
   const style = {
     position: "absolute",
     top: "50%",
@@ -33,15 +34,20 @@ const Vieworder = (props) => {
 
   function handleView() {
     console.log("view");
+    console.log(currentOrderID)
     setOpen(true);
+
   }
 
   //post rating and comment
   const handlecomment = (e) => {
+    console.log("calling")
     e.preventDefault();
-    if (comment.length === 0) {
-      toast.error("Comment Cannot be Empty");
-    } else {
+    // if (comment.length == 0) {
+    //   toast.error("Comment Cannot be Empty");
+    // } 
+    
+    
       apiService
         .post(`/api/components/comments/${currentOrderID}`, {
           rating,
@@ -61,14 +67,16 @@ const Vieworder = (props) => {
             position: toast.POSITION.TOP_LEFT,
           });
         });
-    }
+    
   };
 
   //Get User Orders
   const getData = () => {
     apiService.get("/api/orders/myorders").then((res) => {
-      setOrders(res.data.filter((order) => order._id === product));
+      setOrders(res.data.filter((o) => o._id === product));
+       console.log("res")
       console.log(res.data);
+      // console.log(orders);
     });
   };
   React.useEffect(getData, []);
@@ -78,6 +86,8 @@ const Vieworder = (props) => {
       <table className="data-table">
         <thead>
           <tr>
+          <th>Product id</th>
+
             <th>Product Name</th>
             <th>Product Price</th>
             <th>Action</th>
@@ -86,6 +96,8 @@ const Vieworder = (props) => {
         <tbody>
           {orders[0]?.orderItems.map((order, index) => (
             <tr key={index}>
+              <td>{order._id}</td>
+
               <td>{order.name}</td>
               <td>{order.price}</td>
               <td>
@@ -93,6 +105,8 @@ const Vieworder = (props) => {
                 className="add-comment"
                   onClick={() => {
                     handleView();
+                    // console.log("id")
+                    // console.log(o._id)
                     setCurrentOrderID(order._id);
                     setCurrentOrdertype(order.type);
                   }}
@@ -133,7 +147,7 @@ const Vieworder = (props) => {
           />
 
           <button className="post-btn" onClick={handlecomment}>
-            Post Comment
+             Comment
           </button>
         </Box>
       </Modal>

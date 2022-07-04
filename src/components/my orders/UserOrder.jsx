@@ -72,7 +72,7 @@ console.log(orderid)
     apiService.get("/api/orders/myorders").then((res) => {
       setOrders(res.data);
       // setOrders1(res.data.orderItems)
-      // console.log(res.data);
+      console.log(res.data);
     });
   };
   React.useEffect(getData, []);
