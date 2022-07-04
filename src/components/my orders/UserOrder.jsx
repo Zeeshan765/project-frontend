@@ -8,8 +8,8 @@ import { toast } from "react-toastify";
 const UserOrder = (props) => { 
   const [orders, setOrders] = useState([]);
   const [orders1, setOrders1] = useState([]);
-
-  const[orderid,setOrderid]=useState(null);
+const cancelstatus = "Cancelled";
+  const[orderid,setOrderid]=useState("");
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -29,7 +29,7 @@ console.log(orderid)
   };
 
 
-  function handleView(order) {
+  function handleView() {
     apiService.get("/api/orders/mysinglefind/" + orderid).then((res) => {
            setOrders1(res.data.orderItems);
           console.log("single")
@@ -38,6 +38,33 @@ console.log(orderid)
         });
     // setOpen(true);
   }
+
+
+
+//handle cancel
+
+  function handleCancel() {
+    apiService.put("/api/orders/cancel/" + orderid).then((res) => {
+      console.log(res.data);
+      toast.success("Order Cancelled Successfully", {
+        theme: "colored",
+      });
+      window.location.reload();
+    }
+    ).catch((err) => {
+      console.log(err.response.data);
+      toast.error(err.response.data, {
+        theme: "colored",
+      });
+    }
+    );
+  }
+
+
+
+
+
+
 
 
   //Get User Orders
@@ -54,10 +81,13 @@ console.log(orderid)
   const statusColor = (status) => {
     if (status === "Pending") {
       return "#cf9f0e";
-    } else if (status === "Delivered") {
+    } else if (status === "Processing") {
       return "#28a745";
-    } else if (status === "cancelled") {
-      return "#dc3545";
+    } else if (status === "Delivered") {
+      return "#0000FF";
+    }
+    else if (status === "Cancelled") {
+      return "#FF0000";
     }
   };
 
@@ -85,7 +115,7 @@ console.log(orderid)
                 <td>Rs. {order.amount}</td>
                 <td style={{ color: statusColor(order.status) }} >{order.status}</td>
                 <td>
-                 <button>
+                 <button onClick = {handleCancel}>
                   Cancel Order
                  </button>
 
@@ -93,7 +123,7 @@ console.log(orderid)
 
                 <td>
                  <button   onClick={() => {
-                      handleView(order);
+                      handleView();
                        setOrderid(order._id);
                     }}>
                   View Order
