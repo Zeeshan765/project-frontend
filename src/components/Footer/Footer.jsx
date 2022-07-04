@@ -98,7 +98,7 @@ class Footer extends Component {
                 <div className="title-icon">
                   <ContactMailIcon className="icons" />
                 </div>
-                <h3 className="section-title text-white pt-5">Contact us</h3>
+                <h3 className="section-titleContactUS text-white pt-5">Contact us</h3>
               </div>
             </div>
           </div>
