@@ -3,7 +3,7 @@ import useState from "react-usestateref";
 import "./PeripheralPage.css";
 import Slider from "@material-ui/core/Slider";
 import Typography from "@material-ui/core/Typography";
-
+import Footer from "../Footer/Footer";
 import axios from "axios";
 
 import apiService from "../../services/ApiService";
@@ -215,6 +215,7 @@ const PeripheralPage = (props) => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

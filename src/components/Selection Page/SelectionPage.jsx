@@ -4,7 +4,7 @@ import custompc from "../../Assets/custompc.png";
 import requirmentpc from "../../Assets/requirmentpc.png";
 import budgetpc from "../../Assets/budgetpc.png";
 import "./SelectionPage.css";
-
+import Footer from "../Footer/Footer";
 import Card from "react-bootstrap/Card";
 import { useState } from "react";
 
@@ -131,7 +131,9 @@ const SelectionPage = () => {
           </div>
         </div> */}
       </div>
+      <Footer />
     </div>
+    
   );
 };
 

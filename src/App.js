@@ -98,7 +98,7 @@ const App = ({ history }) => {
           <Route path='/vieworder/:id' exact component={NewView} />
           <Route path='/Custom-cart' exact component={CustomCart} />
         </Switch>
-        <Footer />;
+        
       </Router>
     </>
   );

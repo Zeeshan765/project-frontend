@@ -11,7 +11,7 @@ import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Chat from "../Chat/Chat";
 import Footer from "../Footer/Footer";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Landing = () => {
   const history = useHistory();
@@ -44,7 +44,6 @@ const Landing = () => {
           </div>
         </div>
       </div>
-
       <div className="carousel-container">
         <div className="trend-heading">
           {/* <p className="trendText">Trending Products</p> */}
@@ -144,7 +143,6 @@ const Landing = () => {
           </div>
         </div>
       </section>
-
       <section className="section bg-light" id="pricing">
         <div className="container">
           <div className="row justify-content-center">
@@ -178,7 +176,10 @@ const Landing = () => {
                   </p>
                 </div>
                 <div className="mt-5">
-                  <Link to="/budget/lowbudget" className="btn btn-custom btn-rounded btnbuynow">
+                  <Link
+                    to="/budget/lowbudget"
+                    className="btn btn-custom btn-rounded btnbuynow"
+                  >
                     Buy Now!
                   </Link>
                 </div>
@@ -204,7 +205,10 @@ const Landing = () => {
                   </p>
                 </div>
                 <div className="mt-5">
-                  <Link to="/budget/midbudget" className="btn btn-custom btn-rounded btnbuynow">
+                  <Link
+                    to="/budget/midbudget"
+                    className="btn btn-custom btn-rounded btnbuynow"
+                  >
                     Buy Now!
                   </Link>
                 </div>
@@ -214,7 +218,8 @@ const Landing = () => {
               <div className="price-box p-5 bg-dark text-center mt-4">
                 <div className="plan-price">
                   <h3>
-                    <sup>pkr</sup><b>90,000+</b>
+                    <sup>pkr</sup>
+                    <b>90,000+</b>
                   </h3>
                 </div>
                 <div className="plan-name mt-4">
@@ -226,7 +231,10 @@ const Landing = () => {
                   </p>
                 </div>
                 <div className="mt-5">
-                  <Link to="/budget/highbudget" className="btn btn-custom btn-rounded btnbuynow">
+                  <Link
+                    to="/budget/highbudget"
+                    className="btn btn-custom btn-rounded btnbuynow"
+                  >
                     Buy Now!
                   </Link>
                 </div>
@@ -245,6 +253,7 @@ const Landing = () => {
       </div> */}
       <Chat />
       {/* <Footer /> */}
+      <Footer />;
     </div>
   );
 };
