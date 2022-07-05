@@ -17,7 +17,7 @@ const Singleperipheral = (props) => {
   const { data } = props;
   const id = data._id;
   const history = useHistory();
-  const rating = data.rate;
+  // const rating = data.rate;
 // const[rating,setRating]=React.useState(0);
 // setRating(data.rating);
 const[reviewcount,setReviewcount] = React.useState("");
@@ -52,7 +52,13 @@ const[reviewcount,setReviewcount] = React.useState("");
                 <Card.Title>{data.name}</Card.Title>
                 <Card.Text>
                   <h4>{data.price}</h4>
-          <Rating className='rating' name="read-only" value={rating} readOnly /><span className="ratingtxt">  ({data.numReviews})</span>
+          {/* <Rating className='rating' name="read-only" value={rating} readOnly /><span className="ratingtxt">  ({data.numReviews})</span> */}
+
+                  {/* <p>{data.description}</p> */}
+                </Card.Text>
+                <Card.Text>
+                  <h5>{data.info1}</h5>
+          {/* <Rating className='rating' name="read-only" value={rating} readOnly /><span className="ratingtxt">  ({data.numReviews})</span> */}
 
                   {/* <p>{data.description}</p> */}
                 </Card.Text>

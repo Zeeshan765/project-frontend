@@ -39,8 +39,8 @@ const ComponentDetail = (props) => {
       setinfo3(res.data.info3);
       setinfo4(res.data.info4);
       setSite(res.data.site);
-      setReviewcount(res.data.numReviews);
-      setRatingcount(res.data.rate);
+      // setReviewcount(res.data.numReviews);
+      // setRatingcount(res.data.rate);
     });
   }, []);
 
@@ -95,13 +95,13 @@ const ComponentDetail = (props) => {
         <div className="prodata">
           <p className="titleText">{name}</p>
           <hr></hr>
-          <Rating
+          {/* <Rating
             className="rating"
             name="read-only"
             value={ratingcount}
             readOnly
           />{" "}
-          <span className="ratingtxt">({reviewcount})</span>
+          <span className="ratingtxt">({reviewcount})</span> */}
           <hr></hr>
           <h4 className="info1">➤ {info1}</h4>
           <br />

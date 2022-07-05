@@ -103,7 +103,7 @@ console.log(orderid)
               <th>Order Id</th>
               <th>Order Amount</th>
               <th>Order Status</th>
-              {/* <th>Action</th> */}
+              <th>Action</th>
               <th>View Order</th>
               <th>Post Review</th>
             </tr>
@@ -114,7 +114,7 @@ console.log(orderid)
                 <td>{order._id}</td>
                 <td>Rs. {order.amount}</td>
                 <td style={{ color: statusColor(order.status) }} >{order.status}</td>
-                {/* <td>
+                <td>
                  <button onClick={(e) => {
                 apiService.put("/api/orders/cancel/" + order._id).then((res) => {
                   console.log(res.data);
@@ -131,7 +131,7 @@ console.log(orderid)
                   Cancel Order
                  </button>
 
-                </td> */}
+                </td>
 
                 <td>
                  <button   

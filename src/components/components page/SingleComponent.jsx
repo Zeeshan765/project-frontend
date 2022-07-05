@@ -23,7 +23,7 @@ const SingleComponent = (props) => {
   const { data } = props;
   const id = data._id;
   const history = useHistory();
-  const rating = data.rate;
+  // const rating = data.rate;
 
   //View Detail Click Function
   const handleView = () => {
@@ -52,7 +52,13 @@ const SingleComponent = (props) => {
                 <Card.Title style={{fontSize: "19px"}}>{data.name}</Card.Title>
                 <Card.Text>
                   <h4 style={{fontSize: "17px"}}> Rs. {data.price}</h4>
-                  <Rating name="read-only" className="rating" value={rating} readOnly /> <span className="ratingtxt">({data.numReviews})</span>
+                  {/* <Rating name="read-only" className="rating" value={rating} readOnly /> <span className="ratingtxt">({data.numReviews})</span> */}
+                
+                  {/* <p style={{fontSize: "14px"}}>{data.description}</p> */}
+                </Card.Text>  
+                <Card.Text>
+                  <h5 style={{fontSize: "17px"}}>{data.info1}</h5>
+                  {/* <Rating name="read-only" className="rating" value={rating} readOnly /> <span className="ratingtxt">({data.numReviews})</span> */}
                 
                   {/* <p style={{fontSize: "14px"}}>{data.description}</p> */}
                 </Card.Text>  

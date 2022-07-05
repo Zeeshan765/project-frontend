@@ -322,7 +322,7 @@ React.useEffect(() => {
           </tbody>
         </table>
       </div>
-
+<h4 className="dc">Delievery Charges : Rs{dc}</h4>
       <div>
         <h3 className="addProductTitle">Payment Method</h3>
         <div className="radio">

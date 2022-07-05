@@ -11,6 +11,11 @@
 
     width: 100%;
 }
+
+.dc{
+    margin-left: 1rem;
+    color:purple
+}
 .orderTitle {
     color: black;
     font-weight: bold;

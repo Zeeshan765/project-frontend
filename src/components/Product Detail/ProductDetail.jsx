@@ -48,8 +48,8 @@ const ProductDetail = (props) => {
       setinfo2(res.data.info2);
       setinfo3(res.data.info3);
       setinfo4(res.data.info4);
-      setReviewcount(res.data.numReviews);
-      setRatingcount(res.data.rate);
+      // setReviewcount(res.data.numReviews);
+      // setRatingcount(res.data.rate);
     });
   }, []);
   // const handleaddtocart = (temp) => {
@@ -113,7 +113,7 @@ const ProductDetail = (props) => {
         </div>
         <div className="prodata">
           <p className="titleText">Product: {name}</p>
-          <Rating className="rating" name="read-only" value={ratingcount} readOnly /> <span className="ratingtxt">({reviewcount})</span> 
+          {/* <Rating className="rating" name="read-only" value={ratingcount} readOnly /> <span className="ratingtxt">({reviewcount})</span>  */}
           <hr></hr>
           <h4 className="info1">➤ {info1}</h4>
           <br />
