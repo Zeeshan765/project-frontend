@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import ProcessorsComp from './ProcessorsComp';
 import apiService from '../../../services/ApiService';
+import Footer from "../../../components/Footer/Footer";
 function Processors() {
    
    const [products, setProducts] = useState([]);
@@ -15,7 +16,7 @@ function Processors() {
  
     
       return (
-      
+      <div>
       <div className='TrendingProduct-container'>
            {products
           .filter((product) => product.category === 'Processor')
@@ -24,7 +25,10 @@ function Processors() {
           ))}
     
     
-      </div>);
+      </div>
+      
+      </div>
+      );
     };
 
 export default Processors;
