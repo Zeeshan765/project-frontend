@@ -51,10 +51,10 @@ const App = ({ history }) => {
         <Switch>
           <Route path='/' exact component={Landing} />
           <Route path='/register' exact component={Register} />
-          <Auth>
+         
             {' '}
             <Route path='/login' exact component={Login} />
-          </Auth>
+          
           <Route path='/forgetpassword' exact component={Forget} />
           <Route path='/passwordreset/:resetToken' exact component={Reset} />
           <Route path='/profile' exact component={Profile} />
