@@ -17,7 +17,7 @@ const Singleperipheral = (props) => {
   const { data } = props;
   const id = data._id;
   const history = useHistory();
-  const rating = data.rating;
+  const rating = data.rate;
 // const[rating,setRating]=React.useState(0);
 // setRating(data.rating);
 const[reviewcount,setReviewcount] = React.useState("");

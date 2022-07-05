@@ -43,11 +43,11 @@ console.log(orders)
   const handlecomment = (e) => {
     console.log("calling")
     e.preventDefault();
-    // if (comment.length == 0) {
-    //   toast.error("Comment Cannot be Empty");
-    // } 
+    if (comment.length == 0) {
+      toast.error("Comment Cannot be Empty");
+    } 
     
-    
+    else{
       apiService
         .post(`/api/components/comments/${currentOrderID}`, {
           rating,
@@ -67,7 +67,7 @@ console.log(orders)
             position: toast.POSITION.TOP_LEFT,
           });
         });
-    
+      }
   };
 
   //Get User Orders

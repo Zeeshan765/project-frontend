@@ -23,7 +23,7 @@ const SingleComponent = (props) => {
   const { data } = props;
   const id = data._id;
   const history = useHistory();
-  const rating = data.rating;
+  const rating = data.rate;
 
   //View Detail Click Function
   const handleView = () => {

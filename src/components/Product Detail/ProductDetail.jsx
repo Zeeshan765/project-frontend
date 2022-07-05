@@ -30,12 +30,14 @@ const ProductDetail = (props) => {
   const [info2, setinfo2] = useState();
   const [info3, setinfo3] = useState();
   const [info4, setinfo4] = useState();
-  const [reviewcount, setReviewcount] = useState("");
-  const [ratingcount, setRatingcount] = useState(0);
+  const [reviewcount, setReviewcount] = useState(0);
+  const [ratingcount, setRatingcount] = useState("");
   console.log( "description" );
   console.log( description );
   React.useEffect(() => {
     apiService.get("/api/products/find/" + product).then((res) => {
+     
+     console.log("res")
       console.log(res.data);
       //setTemp(res.data);
       setName(res.data.name);
@@ -47,7 +49,7 @@ const ProductDetail = (props) => {
       setinfo3(res.data.info3);
       setinfo4(res.data.info4);
       setReviewcount(res.data.numReviews);
-      setRatingcount(res.data.rating);
+      setRatingcount(res.data.rate);
     });
   }, []);
   // const handleaddtocart = (temp) => {
