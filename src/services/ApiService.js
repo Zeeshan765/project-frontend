@@ -1,4 +1,5 @@
 import axiosInstance from './axiosInstance';
+import jwtDecode from 'jwt-decode';
 
 class APIService {
   getProducts = (page = 1, perPage = 8) => this.get('/api/products/pagination?page=' + page + '&perPage=' + perPage);
@@ -11,9 +12,28 @@ class APIService {
   patch = (url) => axiosInstance.patch(url);
   put = (url, data) => axiosInstance.put(url, data);
 
+  
   // Check User Log or not
   isLoggedIn = () => {
     return localStorage.getItem('token') ? true : false;
+  };
+
+  //Get Logged In user name
+  getLoggedInUser = () => {
+    try {
+      const jwt = localStorage.getItem('token');
+      return jwtDecode(jwt);
+    } catch (ex) {
+      return null;
+    }
+  };
+
+  //Check admin
+  isUser = () => {
+    if (this.isLoggedIn()) {
+      if (this.getLoggedInUser().role === 'user') return true;
+      else return false;
+    } else return false;
   };
 }
 

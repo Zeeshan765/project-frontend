@@ -48,7 +48,7 @@ const PeripheralPage = (props) => {
   useEffect(() => {
     const fetchData = async () => {
       const res = await axios.get(
-        `http://localhost:4000/api/products/search/${keyword}`
+        `https://moc-server.herokuapp.com/api/products/search/${keyword}`
       );
       if (keyword.length > 0) {
         setMenuData(res.data);
@@ -62,7 +62,7 @@ const PeripheralPage = (props) => {
   useEffect(() => {
     const fetchData = async () => {
       const res = await axios.get(
-        `http://localhost:4000/api/products/filter/${price[0]}/${price[1]}`
+        `https://moc-server.herokuapp.com/api/products/filter/${price[0]}/${price[1]}`
       );
       //setPrice(res.data)
       setMenuData(res.data);
