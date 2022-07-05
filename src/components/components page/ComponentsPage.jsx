@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 // import { useLocation } from "react-router-dom";
+import Footer from "../Footer/Footer";
 import { useLocation } from "react-router-dom";
 
 import {
@@ -237,6 +238,7 @@ const ComponentsPage = (props) => {
           </p>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };
