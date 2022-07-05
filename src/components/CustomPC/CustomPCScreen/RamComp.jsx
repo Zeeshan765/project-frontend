@@ -40,7 +40,7 @@ function RamComp({ product }) {
                 <Card.Title>{product.name}</Card.Title>
                 <Card.Text>
                   <h4>{(product.price * ramValueRef.current) / 4}</h4>
-                  <p>{product.description}</p>
+                  <p>{product.info1}</p>
                 </Card.Text>
               </Card.Body>
               <div>
