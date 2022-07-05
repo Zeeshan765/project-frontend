@@ -51,7 +51,7 @@ const[reviewcount,setReviewcount] = React.useState("");
               <Card.Body>
                 <Card.Title>{data.name}</Card.Title>
                 <Card.Text>
-                  <h4>{data.price}</h4>
+                  <h4>Rs. {data.price}</h4>
           {/* <Rating className='rating' name="read-only" value={rating} readOnly /><span className="ratingtxt">  ({data.numReviews})</span> */}
 
                   {/* <p>{data.description}</p> */}
