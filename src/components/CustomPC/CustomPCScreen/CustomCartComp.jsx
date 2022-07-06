@@ -32,7 +32,11 @@ export default function CustomCartComp({ item }) {
                 <Card.Title style={{fontSize: "19px"}}>{item.name}</Card.Title>
                 <Card.Text>
                   <h4 style={{fontSize: "17px"}}> Rs. {item.price}</h4>
-                  <p style={{fontSize: "14px"}}>{item.description}</p>
+                  <div style={{alignItems:"center",backgroundColor:""}}>
+                  <p style={{fontSize: "14px"}}>{item.info1}</p>
+                
+                
+                  </div>
                 </Card.Text>
               </Card.Body>
             </Card>
