@@ -117,7 +117,8 @@ const Login = (props) => {
       .catch((error) => {
         console.log(error);
         toast.error(error.response.data, {
-          position: toast.POSITION.TOP_LEFT,
+          position: toast.POSITION.TOP_RIGHT,
+          theme:"colored",
         });
       });
     /*userService

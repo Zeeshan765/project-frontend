@@ -70,13 +70,15 @@ const ComponentDetail = (props) => {
         console.log(res.data);
         props.clicked(new Date());
         toast.success("Added To Cart Successfully", {
+          position: toast.POSITION.TOP_RIGHT,
+
           theme: "colored",
         });
       })
       .catch((err) => {
         console.log(err.response.data);
         toast.error(err.response.data, {
-          position: toast.POSITION.TOP_LEFT,
+          position: toast.POSITION.TOP_RIGHT,
           theme: "colored",
         });
       });
@@ -113,14 +115,15 @@ const ComponentDetail = (props) => {
           <h4 className="info1">➤ {info4}</h4>
           <br />
           <p className="additioninfo">Addition information </p>
-          <a className="site" target="_blank" href={site}>
-            View Product on Company's site
-          </a>
+        
           <h4 className="desc">{description}</h4>
           <br />
           <hr></hr>
           <p className="priceText"> Rs. {price} </p>
           <br />
+          <a className="site" target="_blank" href={site}>
+            View Product on Company's site
+          </a>
           <hr></hr>
           <div className="buttonss">
             <button

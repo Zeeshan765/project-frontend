@@ -77,7 +77,7 @@ function ProcessorsComp({ product }) {
                 <Card.Title>{product.name}</Card.Title>
                 <Card.Text>
                   <h4>{product.price} pkr</h4>
-                  <p>{product.description}</p>
+                  <p>{product.info1}</p>
                 </Card.Text>
               </Card.Body>
               <Card.Footer>

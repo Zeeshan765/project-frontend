@@ -53,12 +53,16 @@ const cartSlice = createSlice({
       state.cpuTotal += action.payload.price ;
 
         toast.success(state.products[0].name + " has been added to your PC Build ",{
-          theme:"colored"
+          position: toast.POSITION.TOP_RIGHT,
+
+          theme: "colored",
         });
       }
      else if (state.products[0].name === action.payload.name){
         toast.error(state.products[0].name+ " is already in the Build",{
-          theme:"colored"
+          position: toast.POSITION.TOP_RIGHT,
+
+          theme: "colored",
         });
         return;
       }
@@ -66,7 +70,9 @@ const cartSlice = createSlice({
       state.cpuTotal = 0 ;
 
         toast.info(state.products[0].name + " has been replaced by "+ action.payload.name,{
-          theme:"colored"
+          position: toast.POSITION.TOP_RIGHT,
+
+          theme: "colored",
         });
         state.products[0] = action.payload;
       state.cpuTotal += action.payload.price ;
@@ -96,12 +102,16 @@ const cartSlice = createSlice({
       state.gpuTotal += action.payload.price ;
 
         toast.success(state.products[1].name + " has been added to your PC Build ",{
-          theme:"colored"
+          position: toast.POSITION.TOP_RIGHT,
+
+          theme: "colored",
         });
       }
      else if (state.products[1].name === action.payload.name){
         toast.error(state.products[1].name+ " is already in the Build",{
-          theme:"colored"
+          position: toast.POSITION.TOP_RIGHT,
+
+          theme: "colored",
         });
         return;
       }
@@ -109,7 +119,9 @@ const cartSlice = createSlice({
       state.gpuTotal = 0 ;
 
         toast.info(state.products[1].name + " has been replaced by "+ action.payload.name,{
-          theme:"colored"
+          position: toast.POSITION.TOP_RIGHT,
+
+          theme: "colored",
         });
         state.products[1] = action.payload;
       state.gpuTotal += action.payload.price ;
@@ -135,12 +147,16 @@ const cartSlice = createSlice({
       state.moboTotal += action.payload.price ;
 
         toast.success(state.products[2].name + " has been added to your PC Build ",{
-          theme:"colored"
+          position: toast.POSITION.TOP_RIGHT,
+
+          theme: "colored",
         });
       }
      else if (state.products[2].name === action.payload.name){
         toast.error(state.products[2].name+ " is already in the Build",{
-          theme:"colored"
+          position: toast.POSITION.TOP_RIGHT,
+
+          theme: "colored",
         });
         return;
       }
@@ -148,7 +164,9 @@ const cartSlice = createSlice({
       state.moboTotal = 0 ;
 
         toast.info(state.products[2].name + " has been replaced by "+ action.payload.name,{
-          theme:"colored"
+          position: toast.POSITION.TOP_RIGHT,
+
+          theme: "colored",
         });
         state.products[2] = action.payload;
       state.moboTotal += action.payload.price ;
@@ -173,12 +191,16 @@ const cartSlice = createSlice({
       state.ramTotal += action.payload.price ;
 
         toast.success(state.products[3].name + " has been added to your PC Build ",{
-          theme:"colored"
+          position: toast.POSITION.TOP_RIGHT,
+
+          theme: "colored",
         });
       }
      else if (state.products[3].name === action.payload.name){
         toast.error(state.products[3].name+ " is already in the Build ",{
-          theme:"colored"
+          position: toast.POSITION.TOP_RIGHT,
+
+          theme: "colored",
         });
         return;
       }
@@ -186,7 +208,9 @@ const cartSlice = createSlice({
       state.ramTotal = 0 ;
 
         toast.info(state.products[3].name + " has been replaced by "+ action.payload.name,{
-          theme:"colored"
+          position: toast.POSITION.TOP_RIGHT,
+
+          theme: "colored",
         });
         state.products[3] = action.payload;
       state.ramTotal += action.payload.price ;
@@ -226,7 +250,9 @@ const cartSlice = createSlice({
         // storagelength++;
         // index=state.products.length-1+storagelength;
         toast.success(action.payload.name + " has been added to your PC Build ",{
-          theme:"colored"
+          position: toast.POSITION.TOP_RIGHT,
+
+          theme: "colored",
         });
         //state.PCBuildTotal += action.payload.price ;
         
@@ -235,7 +261,9 @@ const cartSlice = createSlice({
     }
       else{
         toast.error("All SATA ports are occupied",{
-          theme:"colored"
+          position: toast.POSITION.TOP_RIGHT,
+
+          theme: "colored",
         });
       }
       
@@ -261,7 +289,9 @@ const cartSlice = createSlice({
         // storagelength++;
         // index=state.products.length-1+storagelength;
         toast.success(action.payload.name + " has been added to your PC Build ",{
-          theme:"colored"
+          position: toast.POSITION.TOP_RIGHT,
+
+          theme: "colored",
         });
     
        // state.PCBuildTotal += action.payload.price ;
@@ -271,7 +301,9 @@ const cartSlice = createSlice({
     
       else{
         toast.error("All SATA ports are occupied",{
-          theme:"colored"
+          position: toast.POSITION.TOP_RIGHT,
+
+          theme: "colored",
         });
       }
       
@@ -299,12 +331,16 @@ const cartSlice = createSlice({
       state.psuTotal += action.payload.price ;
 
         toast.success(action.payload.name + " has been added to your PC Build ",{
-          theme:"colored"
+          position: toast.POSITION.TOP_RIGHT,
+
+          theme: "colored",
         });
       }
      else if (state.products[count+1].name === action.payload.name){
         toast.error(action.payload.name+ " is already in the Build",{
-          theme:"colored"
+          position: toast.POSITION.TOP_RIGHT,
+
+          theme: "colored",
         });
         return;
       }
@@ -317,7 +353,9 @@ const cartSlice = createSlice({
       state.psuTotal = 0 ;
 
         toast.info(state.products[count+1].name + " has been replaced by "+ action.payload.name,{
-          theme:"colored"
+          position: toast.POSITION.TOP_RIGHT,
+
+          theme: "colored",
         });
         state.products[count+1] = action.payload;
       state.psuTotal += action.payload.price ;
@@ -341,12 +379,16 @@ const cartSlice = createSlice({
 
 
         toast.success(action.payload.name + " has been added to your PC Build ",{
-          theme:"colored"
+          position: toast.POSITION.TOP_RIGHT,
+
+          theme: "colored",
         });
       }
      else if (state.products[count+2].name === action.payload.name){
         toast.error(action.payload.name+ " is already in the Build",{
-          theme:"colored"
+          position: toast.POSITION.TOP_RIGHT,
+
+          theme: "colored",
         });
         return;
       }
@@ -359,7 +401,9 @@ const cartSlice = createSlice({
       state.coolingTotal =  0 ;
 
         toast.info(state.products[count+2].name + " has been replaced by "+ action.payload.name,{
-          theme:"colored"
+          position: toast.POSITION.TOP_RIGHT,
+
+          theme: "colored",
         });
         state.products[count+2] = action.payload;
       state.coolingTotal += action.payload.price ;
@@ -389,7 +433,9 @@ const cartSlice = createSlice({
 
         
         toast.success(action.payload.name + " has been added to your PC Build ",{
-          theme:"colored"
+          position: toast.POSITION.TOP_RIGHT,
+
+          theme: "colored",
         });
       }
       // else if(state.products[count+3].category === "Hdd"||state.products[count+1].category === "Ssd"){
@@ -399,7 +445,9 @@ const cartSlice = createSlice({
       // }
      else if (state.products[count+3].name === action.payload.name){
         toast.error(action.payload.name+ " is already in the Build",{
-          theme:"colored"
+          position: toast.POSITION.TOP_RIGHT,
+
+          theme: "colored",
         });
         return;
       }
@@ -407,7 +455,9 @@ const cartSlice = createSlice({
       state.casingTotal = 0 ;
 
         toast.info(state.products[count+3].name + " has been replaced by "+ action.payload.name,{
-          theme:"colored"
+          position: toast.POSITION.TOP_RIGHT,
+
+          theme: "colored",
         });
         state.products[count+3] = action.payload;
       state.casingTotal += action.payload.price ;

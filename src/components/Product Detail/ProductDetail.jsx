@@ -89,13 +89,16 @@ const ProductDetail = (props) => {
         //window.location.reload();
         props.clicked(new Date());
         toast.success("Added To Cart Successfully", {
+          position: toast.POSITION.TOP_RIGHT,
+
           theme: "colored",
         });
       })
       .catch((err) => {
         console.log(err.response.data);
-        toast.error(err.response.data, {
-          position: toast.POSITION.TOP_LEFT,
+        toast.error(err.response.data,{
+          position: toast.POSITION.TOP_RIGHT,
+
           theme: "colored",
         });
       });

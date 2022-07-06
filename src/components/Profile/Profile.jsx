@@ -68,7 +68,11 @@ function allValidation(name, email, phone) {
   if (userNameValidation(name) && emailValidation(email) && phoneValidation(phone)) {
     handleupdate(name, email, phone);
   } else {
-    toast.error("Please Enter Valid Data");
+    toast.error("Please Enter Valid Data",{
+      position: toast.POSITION.TOP_RIGHT,
+
+      theme: "colored",
+    });
   }
 }
 

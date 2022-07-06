@@ -17,7 +17,7 @@ function HddComp({ product }) {
   const dispatch = useDispatch();
   return (
     <>
-      <Row s={1} md={2} className="g-4">
+      <Row s={1} md={2} style={{justifyContent:"space-between"}} className="g-4">
         {Array.from({ length: 1 }).map((_, id) => (
           <Col>
             <Card
@@ -35,7 +35,7 @@ function HddComp({ product }) {
                 <Card.Title>{product.name}</Card.Title>
                 <Card.Text>
                   <h4>{product.price} pkr</h4>
-                  <p>{product.description}</p>
+                  <p>{product.info1}</p>
                 </Card.Text>
               </Card.Body>
               <Card.Footer>

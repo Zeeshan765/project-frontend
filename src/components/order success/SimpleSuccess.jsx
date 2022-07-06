@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-
+import "./SimpleSuccess.css";
 
 const SimpleSuccess = (props) => {
  console.log(props)
@@ -24,7 +24,7 @@ const handlereturn = ()=>{
       {/* {orderId
         ? `Order has been created successfully. Your order number is ${orderId}`
         : `Successfull. Your order is being prepared...`} */}
-      <button style={{ padding: 10, marginTop: 20 }} onClick = {handlereturn}>Go to Homepage</button>
+      <button className='continueShopBtn' style={{ padding: 10, marginTop: 20 }} onClick = {handlereturn}>Go to Homepage</button>
     </div>
   );
 };

@@ -130,13 +130,19 @@ const Register = (props) => {
       .post("/api/auth/register", { password, email, name, phone })
       .then((res) => {
         console.log(res.data);
-        toast.success("Registerd Successfully");
+        toast.success("Registerd Successfully",{
+          position: toast.POSITION.TOP_RIGHT,
+
+          theme: "colored",
+        });
         history.push("/login");
       })
       .catch((err) => {
         console.log(err.response.data);
         toast.error(err.response.data, {
-          position: toast.POSITION.TOP_LEFT,
+          position: toast.POSITION.TOP_RIGHT,
+
+          theme: "colored",
         });
       });
     //Register1(dispatch, { name, email, password, phone });

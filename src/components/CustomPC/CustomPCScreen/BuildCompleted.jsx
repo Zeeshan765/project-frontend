@@ -21,7 +21,7 @@ export default function BuildCompleted() {
       .post("/api/data/carts/cartarray", { array: cartItems, type: type })
       .then((res) => {
         console.log(res);
-        toast.success("Add To Cart Successfully", {
+        toast.success("Added To Cart Successfully", {
           position: toast.POSITION.TOP_RIGHT,
           theme: "colored",
         });
@@ -37,7 +37,7 @@ export default function BuildCompleted() {
   }
   return (
     <div>
-      <h3 className="mainheading">Your Build</h3>
+      <h3 className="mainheading">My Build</h3>
       <CustomCart></CustomCart>
       {/* <button onClick={showCart} className="viewbtn">
         View My Build
