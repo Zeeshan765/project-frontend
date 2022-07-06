@@ -70,13 +70,15 @@ const ComponentDetail = (props) => {
         console.log(res.data);
         props.clicked(new Date());
         toast.success("Added To Cart Successfully", {
+          position: toast.POSITION.TOP_RIGHT,
+
           theme: "colored",
         });
       })
       .catch((err) => {
         console.log(err.response.data);
         toast.error(err.response.data, {
-          position: toast.POSITION.TOP_LEFT,
+          position: toast.POSITION.TOP_RIGHT,
           theme: "colored",
         });
       });

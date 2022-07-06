@@ -128,7 +128,11 @@ React.useEffect(() => {
       .then((res) => {
         console.log("response");
         console.log(res.data);
-        toast.success("Order  has been Placed Successfully");
+        toast.success("Order  has been Placed Successfully",{
+          position: toast.POSITION.TOP_RIGHT,
+
+          theme: "colored",
+        });
       history.push("/SimpleSuccess")
         // swal({
         //   title: 'Congratulations!',
@@ -142,9 +146,17 @@ React.useEffect(() => {
   const validation = (e) => {
     e.preventDefault();
     if (line1 === "") {
-      toast.error("Please Enter Address");
+      toast.error("Please Enter Address",{
+        position: toast.POSITION.TOP_RIGHT,
+
+        theme: "colored",
+      });
     } else if (city === "") {
-      toast.error("Please Enter City");
+      toast.error("Please Enter City",{
+        position: toast.POSITION.TOP_RIGHT,
+
+        theme: "colored",
+      });
     }  else {
       handleorder(e);
       
