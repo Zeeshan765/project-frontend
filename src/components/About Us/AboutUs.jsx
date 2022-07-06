@@ -5,7 +5,7 @@ import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 import Sher from "../../Assets/sher.jpg";
 import Soban from "../../Assets/soban.jpg";
-// import Zeeshan from "../../Assets/zeeshan.jpg";
+import Zeeshan from "../../Assets/zeeshan.jpg";
 
 const AboutUs = () => {
   return (
@@ -59,7 +59,7 @@ const AboutUs = () => {
               style={{ width: "25rem" }}
               className="card text-white bg-secondary"
             >
-              <Card.Img className="imgStyleAboutUS" variant="top" src="" />
+              <Card.Img className="imgStyleAboutUS" variant="top" src={Zeeshan} />
               <Card.Body>
                 <Card.Title className="cardTitleAboutUs">
                   Zeeshan Ashraf
